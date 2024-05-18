@@ -1,6 +1,7 @@
 :root{
   --color-paragraph-primary: #444;
-  --color-gray-background: #f3f3f3;;
+  --color-gray-background: #f3f3f3;
+  --color-primary:rgb(77, 79, 223);
 }
 *{
   margin: 0;
@@ -15,7 +16,7 @@ section{
 }
 nav{
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
@@ -39,4 +40,70 @@ nav{
 .nav-list a, .cart-icon{
 list-style-type: none;
 color: var(--color-paragraph-primary);
+}
+.badge{
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding-left: .4rem;
+  padding-top: .1rem;
+  font-size: .8rem;
+  color: #fff;
+  margin-left: -.8rem;
+  margin-top: .7rem;
+}
+/* HEADER */
+.header-container{
+  max-width:75rem;
+  display: flex;
+  margin: 0 auto;
+}
+.header-description, .header-photo{
+  width: 50%;
+}
+.header-photo img{
+  width: 100%;
+  margin-top: 5rem;
+  padding-left: 3rem;
+}
+.section-header{
+  background-color: #fcfcfc;
+}
+.header-description{
+  margin-top: 5rem;
+}
+.header-title h1{
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color:rgb(43, 43, 43);
+}
+.header-paragraph{
+  color: var(--color-paragraph-primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2.2rem;
+}
+.btn{
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: .8rem 1.8rem;
+    transition: all .3s;
+    line-height: 1.2;
+}
+.btn-header-explore{
+  background-color:var(--color-primary) ;
+  color: #fff;
+  margin-right: .8rem;
+}
+.btn-header-explore:hover{
+  background-color: rgb(58, 60, 179)
+}
+.btn-header-about:hover{
+  background-color: rgb(221, 218, 218);
 }
