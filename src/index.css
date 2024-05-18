@@ -1,6 +1,6 @@
 :root{
   --color-paragraph-primary: #444;
-  --color-gray-background: #f3f3f3;
+  --color-gray-background: #fcfcfc;
   --color-primary:rgb(77, 79, 223);
 }
 *{
@@ -10,9 +10,10 @@
 }
 body{
   font-family: Poppins, sans-serif;
+  background-color: var(--color-gray-background);
 }
 section{
- background-color: var(--color-gray-background);
+ 
 }
 nav{
     display: flex;
@@ -66,9 +67,6 @@ color: var(--color-paragraph-primary);
   width: 100%;
   margin-top: 5rem;
   padding-left: 3rem;
-}
-.section-header{
-  background-color: #fcfcfc;
 }
 .header-description{
   margin-top: 5rem;

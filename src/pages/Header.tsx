@@ -15,7 +15,7 @@ const Header = () => {
              </div>
             </div>
             <div className="header-photo">
-             <img src="./public/header-photo.jpg" alt="sofa-photo" />
+             <img src="./public/header-main-photo.png" alt="sofa-photo" />
             </div>
           </div>
         </section>
