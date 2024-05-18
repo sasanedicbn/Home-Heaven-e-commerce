@@ -102,3 +102,30 @@ color: var(--color-paragraph-primary);
 .btn-header-about:hover{
   background-color: rgb(221, 218, 218);
 }
+/* FEATURED*/
+.section-featured{
+  padding: 12rem 0;
+}
+.container-featured-products{
+  width: 75rem;
+  margin:0 auto;
+}
+.heading-featured{
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: .75px;
+  margin-bottom: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.logos{
+  display: flex;
+  justify-content: space-evenly;
+}
+.logos img{
+  width: 10rem;
+  height: 3rem;
+  opacity: 50%;
+  filter: brightness(0);
+}
