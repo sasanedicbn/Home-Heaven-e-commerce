@@ -1,12 +1,13 @@
 
 import './App.css'
+import NavBar from './pages/NavBar'
 
 function App() {
 
 
   return (
     <>
-    <p>SAas</p>
+     <NavBar/>
     </>
   )
 }

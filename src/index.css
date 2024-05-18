@@ -1,0 +1,42 @@
+:root{
+  --color-paragraph-primary: #444;
+  --color-gray-background: #f3f3f3;;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Poppins, sans-serif;
+}
+section{
+ background-color: var(--color-gray-background);
+}
+nav{
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 75rem;
+    padding: 1.8rem 0;
+}
+.nav-list-item-link{
+  text-decoration: none;
+}
+.logo-div, .shopping-card, .icon-text{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-paragraph-primary)
+}
+.nav-list{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-list a, .cart-icon{
+list-style-type: none;
+color: var(--color-paragraph-primary);
+}
