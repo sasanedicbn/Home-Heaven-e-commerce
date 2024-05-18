@@ -1,7 +1,7 @@
 import { BsBag } from 'react-icons/bs';
 const NavBar = () => {
     return(
-    <section>
+    <section className='section-navbar'>
         <nav>
             {/* ZAMJENITI OVO A POSLIJE SA <LINK TO="/"/> */}
             <a className="nav-list-item-link" href="/">
@@ -22,7 +22,7 @@ const NavBar = () => {
               <div className='icon-text'>
                 <span>Cart</span>
                   <a href='/' className='cart-icon'>
-                  <BsBag/>
+                  <BsBag />
                   </a>
               </div>
                <span className="badge">0</span>

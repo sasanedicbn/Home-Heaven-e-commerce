@@ -20,6 +20,13 @@ nav{
     margin: 0 auto;
     max-width: 75rem;
     padding: 1.8rem 0;
+    
+}
+.section-navbar{
+  position: sticky; 
+  top: 0; 
+  background-color: var(--color-gray-background); 
+  z-index: 1000; 
 }
 .nav-list-item-link{
   text-decoration: none;
@@ -105,6 +112,7 @@ color: var(--color-paragraph-primary);
 /* FEATURED*/
 .section-featured{
   padding: 12rem 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
 }
 .container-featured-products{
   width: 75rem;
@@ -128,4 +136,14 @@ color: var(--color-paragraph-primary);
   height: 3rem;
   opacity: 50%;
   filter: brightness(0);
+}
+/* FEATUREDPRODUCTS */
+.section-featured-products{
+  margin-top: 10rem;
+}
+.featured-header-description{
+  color: var(--color-paragraph-primary);
+  font-size: 3.7rem;
+  font-weight: 500;
+  line-height: 1.4;
 }

@@ -1,6 +1,7 @@
 
 import './App.css'
 import Featured from './pages/Featured'
+import FeaturedProducts from './pages/FeaturedProducts'
 import Header from './pages/Header'
 import NavBar from './pages/NavBar'
 
@@ -12,6 +13,7 @@ function App() {
      <NavBar/>
      <Header/>
      <Featured/>
+     <FeaturedProducts/>
     </>
   )
 }
