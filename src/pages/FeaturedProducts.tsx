@@ -7,8 +7,10 @@ const FeaturedProducts = () => {
           <div className="featured-header">
            <h3 className="featured-header-title">FEATURED PRODUCTS</h3>
            <h4 className="featured-header-description">The art of modern living unlocked.</h4>
-          </div>"
-           <FeaturedItem  name="Sofa Set" price="$1,299.99"/>
+          </div>
+           <FeaturedItem  name="Sofa Set" price="$1,299.99" img="public/FeturedProducts/product-1.jpeg"/>
+           <FeaturedItem  name="Utopia Sofa" price="$799.99" img="public/FeturedProducts/product-16.jpeg"/>
+           <FeaturedItem  name="Suede Armchair" price="$159.99" img="public/FeturedProducts/product-17.jpeg"/>
          </div>
         </section>
     )

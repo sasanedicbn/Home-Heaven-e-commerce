@@ -1,10 +1,10 @@
-const FeaturedItem = ({name,price}) => {
+const FeaturedItem = ({name,price,img}) => {
     return(
         <div className="container-featured-items">
         <article className="featured-product-card">
          <div className="featured-product-image">
              <a href='/'>
-                 <img src="public/FeturedProducts/product-1.jpeg" alt="featured-product"/>
+                 <img src={img} alt="featured-product"/>
              </a>
          </div>
          <div className="featured-product-description">
