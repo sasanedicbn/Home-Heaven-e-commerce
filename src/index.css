@@ -2,6 +2,7 @@
   --color-paragraph-primary: #444;
   --color-gray-background: #fcfcfc;
   --color-primary:rgb(77, 79, 223);
+  --color-background-icon: rgb(205, 205, 241);
 }
 *{
   margin: 0;
@@ -192,6 +193,7 @@ color: var(--color-paragraph-primary);
   padding-top: 10rem;
   max-width: 75rem;
   margin: 0 auto;
+  margin-bottom: 10rem;
 }
 .header-title{
   color: var(--color-primary);
@@ -201,4 +203,45 @@ color: var(--color-paragraph-primary);
   margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: bold;
+}
+.creeds-items{
+  column-gap: 2.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5.2rem;
+}
+.creeds-cards{
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: all 1s;
+}
+.creed-icon{
+  background-color: var(--color-background-icon);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.8rem;
+  height: 4rem;
+  margin-bottom: 1.2rem;
+  width: 4rem;
+  position: relative;
+}
+.creed-article-heading{
+  font-size: 1.2rem;
+  color: var(--color-paragraph-primary);
+  padding-bottom: 1.2rem;
+}
+.creed-article-paragraph{
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+.creed-icon span{
+  margin-left: 1.2rem;
+  top:16px;
+  position: absolute;
+}
+.creed-icon span svg{
+  color:var(--color-primary);
 }
