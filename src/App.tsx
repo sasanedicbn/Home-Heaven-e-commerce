@@ -1,5 +1,6 @@
 
 import './App.css'
+import Creeds from './pages/Creeds'
 import Featured from './pages/Featured'
 import FeaturedProducts from './pages/FeaturedProducts'
 import Header from './pages/Header'
@@ -14,6 +15,7 @@ function App() {
      <Header/>
      <Featured/>
      <FeaturedProducts/>
+     <Creeds/>
     </>
   )
 }

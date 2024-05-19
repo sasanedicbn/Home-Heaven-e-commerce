@@ -140,12 +140,12 @@ color: var(--color-paragraph-primary);
 /* FEATUREDPRODUCTS */
 .section-featured-products{
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
   border-bottom: 1px solid rgb(207, 207, 207);
 }
-.featured-header-description{
+.featured-header-description,.header-description-creeds{
   color: var(--color-paragraph-primary);
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -186,4 +186,19 @@ color: var(--color-paragraph-primary);
 }
 .btn-featured:hover{
   background-color: rgb(44, 47, 212);;
+}
+/* Creeds */
+.section-creeds{
+  padding-top: 10rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.header-title{
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: .75px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
