@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { BsBag } from 'react-icons/bs';
 
-const NavBar = () => {
+const NavBar = ({heroRef}) => {
     const navRef = useRef(null);
 
     const handleScroll = () => {
-        if (window.scrollY > 700) {
+        const heroBottom = heroRef.current.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY > heroBottom) {
             navRef.current.classList.add('section-navbar');
-        } else {
+        } else 
             navRef.current.classList.remove('section-navbar');
-        }
-    };
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);

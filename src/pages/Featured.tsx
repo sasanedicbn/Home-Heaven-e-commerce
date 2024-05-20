@@ -1,6 +1,6 @@
-const Featured = () => {
+const Featured = ({heroRef}) => {
     return(
-        <section className="section-featured">
+        <section className="section-featured" ref={heroRef}>
             <div className="container-featured-products">
              <h2 className="heading-featured">As featured in</h2>
              <div className="logos">

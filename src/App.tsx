@@ -1,4 +1,5 @@
 
+import { useRef } from 'react'
 import './App.css'
 import Creeds from './pages/Creeds'
 import Featured from './pages/Featured'
@@ -9,13 +10,13 @@ import Operations from './pages/Operations'
 
 
 function App() {
-
+const heroRef = useRef(null)
 
   return (
     <>
-     <NavBar/>
+     <NavBar heroRef={heroRef}/>
      <Header/>
-     <Featured/>
+     <Featured heroRef={heroRef}/>
      <FeaturedProducts/>
      <Creeds/>
      <Operations/>
