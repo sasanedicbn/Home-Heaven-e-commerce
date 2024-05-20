@@ -3,27 +3,23 @@ import { BsBag } from 'react-icons/bs';
 
 const NavBar = () => {
     const navRef = useRef(null);
-    const [isNavVisible, setIsNavVisible] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 700) {
-            setIsNavVisible(true);
+            navRef.current.classList.add('section-navbar');
         } else {
-            setIsNavVisible(false);
+            navRef.current.classList.remove('section-navbar');
         }
     };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
     }, []);
 
 
     return (
-        <section className={isNavVisible ? 'section-navbar' : ''}>
-            <nav ref={navRef}>
+        <section ref={navRef} >
+            <nav>
                 {/* ZAMJENITI OVO A POSLIJE SA <LINK TO="/"/> */}
                 <a className="nav-list-item-link" href="/">
                     <div className="logo-div">
