@@ -1,8 +1,8 @@
 import FeaturedItem from "../components/FeaturedItem";
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({targetRef}) => {
     return(
-        <section className="section-featured-products">
+        <section className="section-featured-products" ref={targetRef}>
          <div className="container-featured-products">
           <div className="featured-header">
            <h3 className="featured-header-title">FEATURED PRODUCTS</h3>

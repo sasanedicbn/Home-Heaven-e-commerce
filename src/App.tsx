@@ -11,13 +11,20 @@ import Operations from './pages/Operations'
 
 function App() {
 const heroRef = useRef(null)
+const targetRef = useRef(null)
+
+const handleLearnMoreClick = () => {
+  targetRef.current.scrollIntoView({
+    behavior: 'smooth'
+  });
+};
 
   return (
     <>
      <NavBar heroRef={heroRef}/>
-     <Header/>
+     <Header onLearnMoreClick={handleLearnMoreClick}/>
      <Featured heroRef={heroRef}/>
-     <FeaturedProducts/>
+     <FeaturedProducts targetRef={targetRef}/>
      <Creeds/>
      <Operations/>
     </>

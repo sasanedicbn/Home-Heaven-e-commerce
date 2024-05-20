@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({onLearnMoreClick}) => {
     return(
         <section className="section-header">
           <div className="container header-container">
@@ -11,7 +11,7 @@ const Header = () => {
                 <a href="/">
                     <button className="btn btn-header-explore">Explore products</button>
                 </a>
-                <button className="btn btn-header-about">Learn more 🠣</button>
+                <button className="btn btn-header-about" onClick={onLearnMoreClick}>Learn more 🠣</button>
              </div>
             </div>
             <div className="header-photo">

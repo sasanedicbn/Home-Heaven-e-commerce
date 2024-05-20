@@ -5,7 +5,7 @@ const NavBar = ({heroRef}) => {
     const navRef = useRef(null);
 
     const handleScroll = () => {
-        const heroBottom = heroRef.current.getBoundingClientRect().top + window.scrollY;
+        const heroBottom = heroRef.current.getBoundingClientRect().bottom;
         if (window.scrollY > heroBottom) {
             navRef.current.classList.add('section-navbar');
         } else 
