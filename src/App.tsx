@@ -5,6 +5,7 @@ import Featured from './pages/Featured'
 import FeaturedProducts from './pages/FeaturedProducts'
 import Header from './pages/Header'
 import NavBar from './pages/NavBar'
+import Operations from './pages/Operations'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
      <Featured/>
      <FeaturedProducts/>
      <Creeds/>
+     <Operations/>
     </>
   )
 }
