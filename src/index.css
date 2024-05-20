@@ -26,8 +26,10 @@ nav{
 .section-navbar{
   position: sticky; 
   top: 0; 
-  background-color: var(--color-gray-background); 
+  background-color: rgb(231, 231, 255); 
   z-index: 1000; 
+  opacity: 95%;
+  transition: all .6s ease;
 }
 .nav-list-item-link{
   text-decoration: none;
@@ -84,7 +86,7 @@ color: var(--color-paragraph-primary);
 }
 .header-paragraph{
   color: var(--color-paragraph-primary);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 2.2rem;
 }
@@ -133,8 +135,8 @@ color: var(--color-paragraph-primary);
   justify-content: space-evenly;
 }
 .logos img{
-  width: 10rem;
-  height: 3rem;
+  /* width: 10rem; */
+  height: 2.2rem;
   opacity: 50%;
   filter: brightness(0);
 }
@@ -202,7 +204,6 @@ color: var(--color-paragraph-primary);
   font-weight: 500;
   letter-spacing: .75px;
   margin-bottom: 1rem;
-  text-transform: uppercase;
   font-weight: bold;
 }
 .creeds-items{

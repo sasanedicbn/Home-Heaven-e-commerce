@@ -7,6 +7,7 @@ import Header from './pages/Header'
 import NavBar from './pages/NavBar'
 import Operations from './pages/Operations'
 
+
 function App() {
 
 
