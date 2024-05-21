@@ -264,3 +264,48 @@ color: var(--color-paragraph-primary);
   display: none;
 }
 
+/* TABLETS */
+@media (max-width: 1220px){
+  .section-header{
+    padding: 0 2.2rem;
+  }
+  .section-featured-products, .section-creeds,{
+   padding: 11.5rem 2.2rem;
+  }
+  .section-operations{
+    padding: 0 2.2rem;
+
+  }
+  nav{
+    padding: 1.8rem 2.2rem;
+  }
+  .header-title h1{
+    font-size: 2rem;
+  }
+  .header-paragraph{
+    font-size: 1rem;
+  }
+  .btn{
+   font-size: 1rem;
+   padding: .7rem 1.7rem;
+   line-height: 1.1;
+  }
+  .heading-featured{
+    font-size: 1rem;
+  }
+  .logos img{
+   height: 2.1rem;
+  }
+  .featured-header-title{
+    font-size: 1rem;
+  }
+  .featured-header-description, .header-description-creeds, .header-description-operations{
+    font-size: 2.4rem;
+  }
+  .creed-article-paragraph{
+    font-size: 1.1rem;
+  }
+  .section-featured-products{
+    margin-top: 0;
+   }
+}
