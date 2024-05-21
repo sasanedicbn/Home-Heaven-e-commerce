@@ -309,3 +309,82 @@ color: var(--color-paragraph-primary);
     margin-top: 0;
    }
 }
+
+@media (max-width: 990px){
+  .creed-article-paragraph{
+    font-size: 1rem;
+  }
+  .header-description{
+    width: 57.5%;
+  }
+  .section-featured-products, .section-creeds, .section-operations .section-header{
+    padding: 11.5rem 1.6rem;
+   }
+   .section-featured-products{
+    margin-top: 0;
+   }
+   .header-title h1{
+    font-size: 1.8rem;
+  }
+  .header-paragraph{
+    font-size: 0.9rem;
+  }
+  .btn{
+    font-size: .9rem;
+    padding: .6rem 1.6rem;
+    line-height: 1;
+   }
+   .heading-featured{
+    font-size: .9rem;
+  }
+  .logos img{
+    height: 1.9rem;
+  }
+  body{
+    position: relative;
+  }
+  .nav-list{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+  .hamburger {
+    z-index: 1000;
+    border: none;
+    width: 36px;
+    height: 30px;
+    cursor: pointer;
+    padding: 4px;
+    color: black;
+  }
+
+  .nav-list{
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   background-color: white;
+   opacity: 95%;
+   color: black;
+   left: 0;
+   right: 0;
+   z-index: 10;
+  }
+ 
+  .nav-list.isOpen {
+    display: block;
+    position: absolute;
+    padding-top: 10rem;
+    padding-left: 44.5%;
+    font-size: 2rem;
+  }
+  .nav-list .icon-text span, .cart-icon, .nav-list.isOpen a li{
+    margin-top: 1rem;
+  }
+  .hamburger svg{
+    height: 22px;
+    width: 28px;
+  }
+}
+
+
