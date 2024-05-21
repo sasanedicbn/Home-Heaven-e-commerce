@@ -422,3 +422,64 @@ color: var(--color-paragraph-primary);
    padding: 5rem 1.6rem;
 }
 }
+
+@media (max-width: 665px){
+  .header-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-title h1{
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .header-description{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .header-photo{
+    width: 100%;
+    margin-top: 0;
+  }
+  .section-featured{
+    padding: 6rem 0;
+  }
+  .logos{
+    width:100%;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin:0 auto;
+  }
+  .logos img{
+    width: 30%;
+    margin:1rem;
+  }
+  .heading-featured{
+    margin-bottom: 1rem;
+  }
+  .feturedItem{
+    flex-direction: column;
+    width: 75%;
+    margin: 2rem auto;
+  }
+  .featured-product-image{
+    margin-top: .9rem;
+  }
+  .featured-header-title, .header-title{
+    text-align: center;
+    font-size: 1rem;
+  }
+  .featured-header-description,.header-description-creeds, .header-description-operations{
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .creeds-items{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .creed-icon{
+    margin:0 auto;
+    text-align: left;
+    margin-bottom: .7rem;
+  }
+ }
