@@ -1,4 +1,7 @@
-const Featured = ({heroRef}) => {
+import React from "react";
+
+
+const Featured = ({heroRef}:{heroRef:React.RefObject<HTMLDivElement>}) => {
     return(
         <section className="section-featured" ref={heroRef}>
             <div className="container-featured-products">

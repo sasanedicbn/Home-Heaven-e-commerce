@@ -9,13 +9,14 @@ import Operations from './Operations'
 
 
 const  Home = () => {
-const heroRef = useRef(null)
-const targetRef = useRef(null)
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
 
 const handleLearnMoreClick = () => {
+  if(targetRef.current){
   targetRef.current.scrollIntoView({
     behavior: 'smooth',
-  });
+  })}
 };
 
   return (

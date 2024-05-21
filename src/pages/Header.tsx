@@ -1,4 +1,4 @@
-const Header = ({onLearnMoreClick}) => {
+const Header = ({onLearnMoreClick}:{onLearnMoreClick:() => void}) => {
     return(
         <section className="section-header">
           <div className="container header-container">

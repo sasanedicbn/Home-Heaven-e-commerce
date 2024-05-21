@@ -1,7 +1,7 @@
 import React from 'react';
 import FeaturedItem from "../components/FeaturedItem";
 
-const FeaturedProducts = React.forwardRef((props, ref) => {
+const FeaturedProducts = React.forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <section className="section-featured-products" ref={ref}>
             <div className="container-featured-products">
