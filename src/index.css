@@ -388,3 +388,37 @@ color: var(--color-paragraph-primary);
 }
 
 
+@media (max-width: 774px){
+  .header-title h1{
+   font-size: 1.5rem;
+ }
+ .header-paragraph{
+   font-size: 0.8rem;
+ }
+ .btn{
+   font-size: .8rem;
+   padding: .6rem 1.5rem;
+   line-height: 1;
+  }
+  .featured-product-name, .featured-product-price{
+    font-size: 1rem;
+  }
+  .logos img{
+   height: 1.6rem;
+  }
+  .heading-featured{
+   font-size: .8rem;
+  }
+  .featured-header-description, .header-description-creeds, .header-description-operations{
+   font-size: 2rem;
+ }
+ .featured-header-title,.header-title{
+   font-size: 1rem;
+ }
+ .creeds-items{
+   gap: 1.5rem;
+ }
+ .section-featured-products, .section-creeds, .section-operations .section-header {
+   padding: 5rem 1.6rem;
+}
+}
