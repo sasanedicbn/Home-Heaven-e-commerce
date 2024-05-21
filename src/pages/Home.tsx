@@ -14,7 +14,7 @@ const targetRef = useRef(null)
 
 const handleLearnMoreClick = () => {
   targetRef.current.scrollIntoView({
-    behavior: 'smooth'
+    behavior: 'smooth',
   });
 };
 
@@ -23,7 +23,7 @@ const handleLearnMoreClick = () => {
      <NavBar heroRef={heroRef}/>
      <Header onLearnMoreClick={handleLearnMoreClick}/>
      <Featured heroRef={heroRef}/>
-     <FeaturedProducts targetRef={targetRef}/>
+     <FeaturedProducts ref={targetRef}/>
      <Creeds/>
      <Operations/>
     </>
