@@ -6,6 +6,7 @@ import FeaturedProducts from './FeaturedProducts'
 import Header from './Header'
 import Operations from './Operations'
 import { NavBarProps } from '../types/types'
+import HomeWrapper from './HomeWrapper'
 
 
 const  Home: React.FC<NavBarProps> = ({heroRef}) => {
@@ -19,13 +20,13 @@ const handleLearnMoreClick = () => {
 };
 
   return (
-    <>
+    <HomeWrapper paddingTop='20rem'>
      <Header onLearnMoreClick={handleLearnMoreClick}/>
      <Featured heroRef={heroRef}/>
      <FeaturedProducts ref={targetRef}/>
      <Creeds/>
      <Operations/>
-    </>
+    </HomeWrapper>
   )
 }
 

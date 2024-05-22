@@ -5,7 +5,7 @@ const HomeWrapper = ({children, paddingTop = "16px"}) => {
     }
     return(
      <div className='wrapper' style={style}>
-
+       {children}
      </div>
     )
 }
