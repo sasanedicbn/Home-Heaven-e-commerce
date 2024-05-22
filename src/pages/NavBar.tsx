@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Outlet } from 'react-router-dom';
 
 type NavBarProps = {
   heroRef: React.RefObject<HTMLDivElement>;
@@ -33,6 +34,7 @@ const NavBar: React.FC<NavBarProps> = ({ heroRef }) => {
   }, []);
 
   return (
+    <>
     <section ref={navRef}>
       <nav>
         {/* ZAMJENITI OVO A POSLIJE SA <LINK TO="/"/> */}
@@ -64,6 +66,8 @@ const NavBar: React.FC<NavBarProps> = ({ heroRef }) => {
         </button>
       </nav>
     </section>
+    <Outlet/>
+    </>
   );
 };
 

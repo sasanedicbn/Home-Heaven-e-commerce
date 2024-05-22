@@ -4,12 +4,11 @@ import Creeds from './Creeds'
 import Featured from './Featured'
 import FeaturedProducts from './FeaturedProducts'
 import Header from './Header'
-import NavBar from './NavBar'
 import Operations from './Operations'
+import { NavBarProps } from '../types/types'
 
 
-const  Home = () => {
-  const heroRef = useRef<HTMLDivElement | null>(null);
+const  Home: React.FC<NavBarProps> = ({heroRef}) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
 const handleLearnMoreClick = () => {
@@ -21,7 +20,6 @@ const handleLearnMoreClick = () => {
 
   return (
     <>
-     <NavBar heroRef={heroRef}/>
      <Header onLearnMoreClick={handleLearnMoreClick}/>
      <Featured heroRef={heroRef}/>
      <FeaturedProducts ref={targetRef}/>
