@@ -121,6 +121,12 @@ color: var(--color-paragraph-primary);
 .container-featured-products{
   max-width: 75rem;
   margin:0 auto;
+  /* border-bottom: 1px solid rgb(139, 29, 29);
+  padding-bottom: 5rem; */
+}
+.section-featured{
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding-bottom: 10rem; 
 }
 .heading-featured{
   color: #888;
@@ -199,8 +205,8 @@ color: var(--color-paragraph-primary);
 /* Creeds */
 .section-creeds{
   /* padding-top: 10rem; */
-  max-width: 75rem;
-  margin: 0 auto;
+  /* max-width: 75rem;
+  margin: 0 auto; */
   padding-bottom: 10rem;
   border-bottom: 1px solid rgb(207, 207, 207)
 }
@@ -211,6 +217,10 @@ color: var(--color-paragraph-primary);
   letter-spacing: .75px;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+.container-creeds{
+  max-width: 75rem;
+  margin: 0 auto;
 }
 .creeds-items{
   column-gap: 2.6rem;
@@ -273,8 +283,8 @@ color: var(--color-paragraph-primary);
   }
   .section-operations{
     padding: 0 2.2rem;
-
   }
+  
   nav{
     padding: 1.8rem 2.2rem;
   }

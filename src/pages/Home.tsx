@@ -20,7 +20,7 @@ const handleLearnMoreClick = () => {
 };
 
   return (
-    <HomeWrapper marginTop='8rem' paddingBottom="8rem" >
+    <HomeWrapper marginTop='10rem'  >
      <Header onLearnMoreClick={handleLearnMoreClick}/>
      <Featured heroRef={heroRef}/>
      <FeaturedProducts ref={targetRef}/>
