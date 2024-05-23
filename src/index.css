@@ -115,7 +115,7 @@ color: var(--color-paragraph-primary);
 }
 /* FEATURED*/
 .section-featured{
-  padding: 12rem 0;
+  /* padding: 12rem 0; */
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 .container-featured-products{
@@ -143,8 +143,8 @@ color: var(--color-paragraph-primary);
 }
 /* FEATUREDPRODUCTS */
 .section-featured-products{
-  margin-top: 10rem;
-  padding-bottom: 10rem;
+  /* margin-top: 10rem;
+  padding-bottom: 10rem; */
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 .featured-header-description,.header-description-creeds, .header-description-operations{
@@ -257,7 +257,7 @@ color: var(--color-paragraph-primary);
 /* Operations */
 .header-operations{
   max-width: 60rem;
-  margin: 10rem auto;
+  margin: 0 auto;
 }
 .hamburger{
   display: none;
