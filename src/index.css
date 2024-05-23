@@ -114,10 +114,10 @@ color: var(--color-paragraph-primary);
   background-color: rgb(221, 218, 218);
 }
 /* FEATURED*/
-.section-featured{
-  /* padding: 12rem 0; */
-  border-bottom: 1px solid rgb(207, 207, 207);
-}
+/* .section-featured{
+   padding: 12rem 0; 
+  border-bottom: 1px solid rgb(207, 207, 207); 
+} */
 .container-featured-products{
   max-width: 75rem;
   margin:0 auto;
@@ -143,8 +143,8 @@ color: var(--color-paragraph-primary);
 }
 /* FEATUREDPRODUCTS */
 .section-featured-products{
-  /* margin-top: 10rem;
-  padding-bottom: 10rem; */
+  /* /* margin-top: 10rem;* */
+  padding-bottom: 10rem; 
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 .featured-header-description,.header-description-creeds, .header-description-operations{
@@ -198,7 +198,7 @@ color: var(--color-paragraph-primary);
 }
 /* Creeds */
 .section-creeds{
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
   max-width: 75rem;
   margin: 0 auto;
   padding-bottom: 10rem;
