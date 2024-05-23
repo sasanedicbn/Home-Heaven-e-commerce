@@ -72,12 +72,8 @@ color: var(--color-paragraph-primary);
 }
 .header-photo img{
   width: 100%;
-  /* margin-top: 5rem; */
   padding-left: 3rem;
 }
-/* .header-description{
-  margin-top: 5rem; 
-} */
 .header-title h1{
   font-size: 2.6rem;
   line-height: 1.2;
@@ -113,16 +109,10 @@ color: var(--color-paragraph-primary);
 .btn-header-about:hover{
   background-color: rgb(221, 218, 218);
 }
-/* FEATURED*/
-/* .section-featured{
-   padding: 12rem 0; 
-  border-bottom: 1px solid rgb(207, 207, 207); 
-} */
+
 .container-featured-products{
   max-width: 75rem;
   margin:0 auto;
-  /* border-bottom: 1px solid rgb(139, 29, 29);
-  padding-bottom: 5rem; */
 }
 .section-featured{
   border-bottom: 1px solid rgb(207, 207, 207);
@@ -142,14 +132,12 @@ color: var(--color-paragraph-primary);
   justify-content: space-evenly;
 }
 .logos img{
-  /* width: 10rem; */
   height: 2.2rem;
   opacity: 50%;
   filter: brightness(0);
 }
 /* FEATUREDPRODUCTS */
 .section-featured-products{
-  /* /* margin-top: 10rem;* */
   padding-bottom: 10rem; 
   border-bottom: 1px solid rgb(207, 207, 207);
 }
@@ -204,9 +192,6 @@ color: var(--color-paragraph-primary);
 }
 /* Creeds */
 .section-creeds{
-  /* padding-top: 10rem; */
-  /* max-width: 75rem;
-  margin: 0 auto; */
   padding-bottom: 10rem;
   border-bottom: 1px solid rgb(207, 207, 207)
 }
