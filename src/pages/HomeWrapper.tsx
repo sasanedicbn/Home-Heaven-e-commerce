@@ -1,11 +1,11 @@
 import React from 'react';
 import '../index.css';
 
-const HomeWrapper = ({ children, paddingTop = "16px" }) => {
+const HomeWrapper = ({ children, paddingBottom = "10",marginTop = '10'  }) => {
   return (
     <div className="wrapper">
       {React.Children.map(children, (child) => (
-        <div style={{ paddingTop }}>
+        <div style={{ paddingBottom, marginTop }}>
           {child}
         </div>
       ))}

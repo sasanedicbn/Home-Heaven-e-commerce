@@ -72,13 +72,12 @@ color: var(--color-paragraph-primary);
 }
 .header-photo img{
   width: 100%;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   padding-left: 3rem;
 }
-.header-description{
-  margin-top: 5rem;
-  
-}
+/* .header-description{
+  margin-top: 5rem; 
+} */
 .header-title h1{
   font-size: 2.6rem;
   line-height: 1.2;
