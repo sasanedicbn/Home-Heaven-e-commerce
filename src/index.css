@@ -115,8 +115,7 @@ color: var(--color-paragraph-primary);
   margin:0 auto;
 }
 .section-featured{
-  border-bottom: 1px solid rgb(207, 207, 207);
-  padding-bottom: 10rem; 
+  border-bottom: 1px solid rgb(207, 207, 207); 
 }
 .heading-featured{
   color: #888;
@@ -138,7 +137,6 @@ color: var(--color-paragraph-primary);
 }
 /* FEATUREDPRODUCTS */
 .section-featured-products{
-  padding-bottom: 10rem; 
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 .featured-header-description,.header-description-creeds, .header-description-operations{
@@ -192,7 +190,6 @@ color: var(--color-paragraph-primary);
 }
 /* Creeds */
 .section-creeds{
-  padding-bottom: 10rem;
   border-bottom: 1px solid rgb(207, 207, 207)
 }
 .header-title{
@@ -477,11 +474,14 @@ color: var(--color-paragraph-primary);
  }
  /* Wrapper */
  .wrapper{
-  margin-bottom: 10rem;
+  margin-top: 5rem;
  }
  .title h3{
   padding-bottom: 1rem;
  }
  .title h4{
+  padding-bottom: 5rem;
+ }
+ .wrapper section {
   padding-bottom: 5rem;
  }

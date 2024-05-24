@@ -35,7 +35,6 @@ const NavBar: React.FC<NavBarProps> = ({ heroRef }) => {
 
   return (
     <>
-    <HomeWrapper>
     <section ref={navRef}>
       <nav>
         {/* ZAMJENITI OVO A POSLIJE SA <LINK TO="/"/> */}
@@ -67,7 +66,6 @@ const NavBar: React.FC<NavBarProps> = ({ heroRef }) => {
         </button>
       </nav>
     </section>
-    </HomeWrapper>
     <Outlet/>
     </>
   );
