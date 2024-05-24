@@ -1,9 +1,11 @@
 
 import { FaStar, FaEye, FaBook } from 'react-icons/fa';
 import CreedsItem from '../components/CreedsItem';
+import HomeWrapper from './HomeWrapper';
 
 const Creeds = () => {
     return(
+        <HomeWrapper>
         <section className="section-creeds">
             <div className="container-creeds">
                 <div className="creeds-header">
@@ -29,6 +31,7 @@ const Creeds = () => {
                 </div>
             </div>
         </section>
+        </HomeWrapper>
     )
 }
 

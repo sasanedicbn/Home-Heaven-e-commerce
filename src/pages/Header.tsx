@@ -1,5 +1,8 @@
+import HomeWrapper from "./HomeWrapper";
+
 const Header = ({onLearnMoreClick}:{onLearnMoreClick:() => void}) => {
     return(
+      <HomeWrapper>
         <section className="section-header">
           <div className="container header-container">
             <div className="header-description">
@@ -19,6 +22,7 @@ const Header = ({onLearnMoreClick}:{onLearnMoreClick:() => void}) => {
             </div>
           </div>
         </section>
+      </HomeWrapper>
     )
 }
 export default Header;

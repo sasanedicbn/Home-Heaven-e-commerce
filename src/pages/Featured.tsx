@@ -1,8 +1,10 @@
 import React from "react";
+import HomeWrapper from "./HomeWrapper";
 
 
 const Featured = ({heroRef}:{heroRef:React.RefObject<HTMLDivElement>}) => {
     return(
+        <HomeWrapper>
         <section className="section-featured" ref={heroRef}>
             <div className="container-featured-products">
              <h2 className="heading-featured">As featured in</h2>
@@ -14,7 +16,7 @@ const Featured = ({heroRef}:{heroRef:React.RefObject<HTMLDivElement>}) => {
              </div>
             </div>
         </section>
-
+     </HomeWrapper>
     )
 }
 export default Featured;

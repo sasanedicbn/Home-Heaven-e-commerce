@@ -1,5 +1,8 @@
+import HomeWrapper from "./HomeWrapper";
+
 const Operations = () => {
     return(
+        <HomeWrapper>
         <section className="section-operations">
             <div className="container-operations">
               <div className="header-operations">
@@ -8,6 +11,7 @@ const Operations = () => {
               </div>
             </div>
         </section>
+        </HomeWrapper>
     )
 }
 export default Operations;
