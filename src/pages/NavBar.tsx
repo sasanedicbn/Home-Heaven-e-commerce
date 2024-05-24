@@ -3,7 +3,7 @@ import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 import { NavBarProps } from '../types/types';
-import HomeWrapper from './HomeWrapper';
+
 
 
 
@@ -37,7 +37,6 @@ const NavBar: React.FC<NavBarProps> = ({ heroRef }) => {
     <>
     <section ref={navRef}>
       <nav>
-        {/* ZAMJENITI OVO A POSLIJE SA <LINK TO="/"/> */}
         <a className="nav-list-item-link" href="/">
           <div className="logo-div">
             <BsBag />
