@@ -154,7 +154,7 @@ color: var(--color-paragraph-primary);
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 4.2rem;
+  /* margin-top: 4.2rem; */
   margin-bottom: 3.5rem;
 }
 .feturedItem img{
@@ -200,7 +200,6 @@ color: var(--color-paragraph-primary);
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: .75px;
-  margin-bottom: 1rem;
   font-weight: bold;
 }
 .container-creeds{
@@ -211,7 +210,6 @@ color: var(--color-paragraph-primary);
   column-gap: 2.6rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 5.2rem;
 }
 .creeds-cards{
     border-radius: .5rem;
@@ -480,4 +478,10 @@ color: var(--color-paragraph-primary);
  /* Wrapper */
  .wrapper{
   margin-bottom: 10rem;
+ }
+ .title h3{
+  padding-bottom: 1rem;
+ }
+ .title h4{
+  padding-bottom: 5rem;
  }

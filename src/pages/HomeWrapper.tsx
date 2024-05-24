@@ -1,8 +1,8 @@
 import '../index.css';
 
-const HomeWrapper = ({ children, className= '' }:{children:any}) => {
+const HomeWrapper = ({ children}:{children:any}) => {
   return (
-    <div className={`wrapper ${className}`}>
+    <div className={`wrapper title subTitle`}>
      {children}
     </div>
   );
