@@ -5,13 +5,9 @@ import HomeSectionWrapper from './HomeSectionWrapper';
 
 const Creeds = () => {
     return(
-        <HomeSectionWrapper>
+        <HomeSectionWrapper title="Creeds we live by" subTitle='Elevate your home with our attitude of excellence and timeless style.'>
         <section className="section-creeds">
             <div className="container-creeds">
-                <div className="creeds-header">
-                    <h3 className="header-title">Creeds we live by</h3>
-                    <h4 className="header-description-creeds">Elevate your home with our attitude of excellence and timeless style.</h4>
-                </div>
                 <div className="creeds-items">
                     <CreedsItem 
                         icon={FaStar}
