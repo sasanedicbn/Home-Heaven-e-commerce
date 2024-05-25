@@ -6,8 +6,6 @@ import NavBar from './pages/NavBar';
 import { useRef } from 'react';
 
 
-
-
 function App() {
   const heroRef = useRef<HTMLDivElement | null>(null);
 
@@ -16,7 +14,7 @@ function App() {
       path: '/',
       element:  <NavBar heroRef={heroRef}/>,
       children:[
-        {path:'/', element:<Home heroRef={heroRef}/>}
+        {path:'/', element:<Home/>}
       ]
     }
   ])

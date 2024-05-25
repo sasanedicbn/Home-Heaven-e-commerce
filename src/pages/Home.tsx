@@ -6,24 +6,20 @@ import FeaturedProducts from './FeaturedProducts'
 import Header from './Header'
 import Operations from './Operations'
 import { NavBarProps } from '../types/types'
+import { RefsProvider } from './Refs/RefsProvider'
 
 
 
-const  Home: React.FC<NavBarProps> = ({heroRef}) => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
+const  Home: React.FC<NavBarProps> = () => {
 
-const handleLearnMoreClick = () => {
-  if(targetRef.current){
-  targetRef.current.scrollIntoView({
-    behavior: 'smooth',
-  })}
-};
 
   return (
     <>
-     <Header onLearnMoreClick={handleLearnMoreClick}/>
-     <Featured heroRef={heroRef}/>
-     <FeaturedProducts ref={targetRef}/>
+    <RefsProvider>
+      <Header/>
+      <Featured />
+      <FeaturedProducts/>
+     </RefsProvider>
      <Creeds/>
      <Operations/>
      </>

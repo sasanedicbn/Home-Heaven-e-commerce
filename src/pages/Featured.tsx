@@ -1,8 +1,11 @@
-import React from "react";
+
 import HomeSectionWrapper from "./HomeSectionWrapper";
+import { useRefs } from "./Refs/RefsProvider";
 
 
-const Featured = ({heroRef}:{heroRef:React.RefObject<HTMLDivElement>}) => {
+const Featured = () => {
+    const {heroRef } = useRefs();
+
     return(
         <HomeSectionWrapper title="" subTitle="">
         <section className="section-featured" ref={heroRef}>

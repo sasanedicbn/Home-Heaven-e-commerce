@@ -5,7 +5,7 @@ import HomeSectionWrapper from './HomeSectionWrapper';
 
 const Creeds = () => {
     return(
-        <HomeSectionWrapper title="Creeds we live by" subTitle='Elevate your home with our attitude of excellence and timeless style.'>
+        <HomeSectionWrapper title="CREEDS WE LIVE BY" subTitle='Elevate your home with our attitude of excellence and timeless style.'>
         <section className="section-creeds">
             <div className="container-creeds">
                 <div className="creeds-items">
