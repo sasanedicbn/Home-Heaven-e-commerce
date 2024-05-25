@@ -1,6 +1,6 @@
 import '../index.css';
 
-const HomeWrapper = ({ children}:{children:any}) => {
+const HomeSectionWrapper = ({ children}:{children:any}) => {
   return (
     <div className={`wrapper title subTitle`}>
      {children}
@@ -8,4 +8,4 @@ const HomeWrapper = ({ children}:{children:any}) => {
   );
 };
 
-export default HomeWrapper;
+export default HomeSectionWrapper;

@@ -1,5 +1,5 @@
 import React from "react";
-import HomeWrapper from "./HomeWrapper";
+import HomeWrapper from "./HomeSectionWrapper";
 
 
 const Featured = ({heroRef}:{heroRef:React.RefObject<HTMLDivElement>}) => {

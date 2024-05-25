@@ -1,10 +1,10 @@
 import React from 'react';
 import FeaturedItem from "../components/FeaturedItem";
-import HomeWrapper from './HomeWrapper';
+import HomeSectionWrapper from './HomeSectionWrapper';
 
 const FeaturedProducts = React.forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <HomeWrapper>
+        <HomeSectionWrapper>
         <section className="section-featured-products" ref={ref}>
             <div className="container-featured-products">
                 <div className="featured-header">
@@ -23,7 +23,7 @@ const FeaturedProducts = React.forwardRef<HTMLDivElement>((_, ref) => {
                 </div>
             </div>
         </section>
-    </HomeWrapper>
+    </HomeSectionWrapper>
     );
 });
 

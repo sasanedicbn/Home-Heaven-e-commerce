@@ -1,8 +1,8 @@
-import HomeWrapper from "./HomeWrapper";
+import HomeSectionWrapper from "./HomeSectionWrapper";
 
 const Operations = () => {
     return(
-        <HomeWrapper>
+        <HomeSectionWrapper>
         <section className="section-operations">
             <div className="container-operations">
               <div className="header-operations">
@@ -11,7 +11,7 @@ const Operations = () => {
               </div>
             </div>
         </section>
-        </HomeWrapper>
+        </HomeSectionWrapper>
     )
 }
 export default Operations;

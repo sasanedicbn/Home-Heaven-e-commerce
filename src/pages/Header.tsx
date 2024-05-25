@@ -1,4 +1,4 @@
-import HomeWrapper from "./HomeWrapper";
+import HomeWrapper from "./HomeSectionWrapper";
 
 const Header = ({onLearnMoreClick}:{onLearnMoreClick:() => void}) => {
     return(

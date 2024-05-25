@@ -1,11 +1,11 @@
 
 import { FaStar, FaEye, FaBook } from 'react-icons/fa';
 import CreedsItem from '../components/CreedsItem';
-import HomeWrapper from './HomeWrapper';
+import HomeSectionWrapper from './HomeSectionWrapper';
 
 const Creeds = () => {
     return(
-        <HomeWrapper>
+        <HomeSectionWrapper>
         <section className="section-creeds">
             <div className="container-creeds">
                 <div className="creeds-header">
@@ -31,7 +31,7 @@ const Creeds = () => {
                 </div>
             </div>
         </section>
-        </HomeWrapper>
+        </HomeSectionWrapper>
     )
 }
 
