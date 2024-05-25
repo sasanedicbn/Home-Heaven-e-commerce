@@ -3,12 +3,14 @@ import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 import { NavBarProps } from '../types/types';
+import { useRefs } from './Refs/RefsProvider';
 
 
 
 
-const NavBar: React.FC<NavBarProps> = ({ heroRef }) => {
-  const navRef = useRef<HTMLDivElement | null>(null);
+const NavBar: React.FC<NavBarProps> = () => {
+  const navRef = useRefs<HTMLDivElement | null>(null);
+  const heroRef = useRefs(null)
   const [isOpenMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {

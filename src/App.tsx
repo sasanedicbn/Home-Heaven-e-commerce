@@ -3,16 +3,15 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import NavBar from './pages/NavBar';
-import { useRef } from 'react';
+import { RefsProvider } from './pages/Refs/RefsProvider';
 
 
 function App() {
-  const heroRef = useRef<HTMLDivElement | null>(null);
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element:  <NavBar heroRef={heroRef}/>,
+      element:   <RefsProvider><NavBar /></RefsProvider>,
       children:[
         {path:'/', element:<Home/>}
       ]

@@ -474,10 +474,10 @@ color: var(--color-paragraph-primary);
  }
  /* Wrapper */
  .wrapper{
-  margin-top: 8.5rem;
+  margin-top: 9rem;
  }
  .wrapper section {
-  padding-bottom: 8.5rem;
+  padding-bottom: 9rem;
  }
  .title{
  color: var(--color-primary);
@@ -496,5 +496,5 @@ padding-bottom: 5rem;
 }
 .container {
   max-width: 75rem;
-   margin: 0 auto;
+  margin: 0 auto;
 }
