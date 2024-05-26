@@ -3,7 +3,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import NavBar from './pages/NavBar';
-import { RefsProvider } from './pages/Refs/RefsProvider';
 
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element:   <RefsProvider><NavBar /></RefsProvider>,
+      element:  <NavBar />,
       children:[
         {path:'/', element:<Home/>}
       ]

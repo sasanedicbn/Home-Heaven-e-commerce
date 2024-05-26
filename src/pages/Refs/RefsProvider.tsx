@@ -1,24 +1,51 @@
-import { createContext, useContext, useRef } from "react";
+// import  { createContext, useContext, useRef, useEffect } from "react";
 
-const RefsContext = createContext(null);
+// const RefsContext = createContext(null);
 
-const RefsProvider = ({ children }) => {
-  const targetRef = useRef(null);
-  const heroRef = useRef(null);
+// const RefsProvider = ({ children }) => {
+//   const navRef = useRef(null);
 
-  return (
-    <RefsContext.Provider value={{ targetRef, heroRef }}>
-      {children}
-    </RefsContext.Provider>
-  );
-};
+//   useEffect(() => {
+//     const stickyNav = (entries) => {
+//       const [entry] = entries;
+//       console.log(entry);
+//       if (!entry.isIntersecting) {
+//         console.log(navRef)
+//         navRef.current.classList.add('section-navbar');
+//       } else {
+//         navRef.current.classList.remove('section-navbar');
+//       }
+//     };
 
-const useRefs = () => {
-  const context = useContext(RefsContext);
-  if (!context) {
-    throw new Error('useRefs must be used within a RefsProvider');
-  }
-  return context;
-};
+//     const headerObserver = new IntersectionObserver(stickyNav, {
+//       root: null,
+//       threshold: 0,
+//     });
 
-export { RefsProvider, useRefs };
+//     if (navRef.current) {
+//       headerObserver.observe(navRef.current);
+//     }
+
+//     return () => {
+//       if (navRef.current) {
+//         headerObserver.unobserve(navRef.current);
+//       }
+//     };
+//   }, []); 
+
+//   return (
+//     <RefsContext.Provider value={{ navRef }}>
+//       {children}
+//     </RefsContext.Provider>
+//   );
+// };
+
+// const useRefs = () => {
+//   const context = useContext(RefsContext);
+//   if (!context) {
+//     throw new Error('Error');
+//   }
+//   return context;
+// };
+
+// export { RefsProvider, useRefs };

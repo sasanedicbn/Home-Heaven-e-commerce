@@ -19,9 +19,9 @@ const  Home: React.FC<NavBarProps> = () => {
       <Header/>
       <Featured />
       <FeaturedProducts/>
+      <Creeds/>
+      <Operations/>
      </RefsProvider>
-     <Creeds/>
-     <Operations/>
      </>
   )
 }
