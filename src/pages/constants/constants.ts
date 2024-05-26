@@ -2,7 +2,7 @@ import { createContext, useContext, useRef } from 'react';
 
 const RefsContext = createContext(null);
 
-const RefsProvider = ({ children }) => {
+  const RefsProvider = ({ children }) => {
   const targetRef = useRef(null);
   const heroRef = useRef(null);
   const navRef = useRef(null);
