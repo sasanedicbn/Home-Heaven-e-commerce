@@ -1,16 +1,16 @@
-import HomeSectionWrapper from "./HomeSectionWrapper";
-// import { useRefs } from "./Refs/RefsProvider";
+import HomeSectionWrapper from './HomeSectionWrapper';
+import { useRefs } from './constants/constants';
 
-const Header = ({heroRef}) => {
-  // const { targetRef } = useRefs();
+const Header = () => {
+  const { targetRef, heroRef } = useRefs();
 
-  // const handleLearnMoreClick = () => {
-  //   if (targetRef.current) {
-  //     targetRef.current.scrollIntoView({
-  //       behavior: 'smooth',
-  //     });
-  //   }
-  // };
+  const handleLearnMoreClick = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <HomeSectionWrapper title="" subTitle="">
@@ -25,7 +25,7 @@ const Header = ({heroRef}) => {
               <a href="/">
                 <button className="btn btn-header-explore">Explore products</button>
               </a>
-              <button className="btn btn-header-about"  >Learn more 🠣</button>
+              <button className="btn btn-header-about" onClick={handleLearnMoreClick}>Learn more 🠣</button>
             </div>
           </div>
           <div className="header-photo">
@@ -38,6 +38,7 @@ const Header = ({heroRef}) => {
 };
 
 export default Header;
+
 
 
 

@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import NavBar from './pages/NavBar';
+import { RefsProvider } from './pages/constants/constants';
 
 function App() {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -18,7 +19,9 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router} />
+    <RefsProvider>
+     <RouterProvider router={router} />
+    </RefsProvider>
   );
 }
 
