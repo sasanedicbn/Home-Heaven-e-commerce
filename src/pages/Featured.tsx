@@ -1,14 +1,14 @@
 
 import HomeSectionWrapper from "./HomeSectionWrapper";
-import { useRefs } from "./Refs/RefsProvider";
+// import { useRefs } from "./Refs/RefsProvider";
 
 
 const Featured = () => {
-    const {heroRef } = useRefs();
+    // const {heroRef } = useRefs();
 
     return(
         <HomeSectionWrapper title="" subTitle="">
-        <section className="section-featured" ref={heroRef}>
+        <section className="section-featured">
             <div className="container-featured-products">
              <h2 className="heading-featured">As featured in</h2>
              <div className="logos">

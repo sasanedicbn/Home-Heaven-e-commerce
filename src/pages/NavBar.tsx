@@ -3,14 +3,9 @@ import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 import { NavBarProps } from '../types/types';
-import { useRefs } from './Refs/RefsProvider';
 
-
-
-
-const NavBar: React.FC<NavBarProps> = () => {
-  const navRef = useRefs<HTMLDivElement | null>(null);
-  const heroRef = useRefs(null)
+const NavBar: React.FC<NavBarProps> = ({heroRef}) => {
+  const navRef = useRef<HTMLDivElement | null>(null);
   const [isOpenMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -37,37 +32,40 @@ const NavBar: React.FC<NavBarProps> = () => {
 
   return (
     <>
-    <section ref={navRef}>
-      <nav>
-        <a className="nav-list-item-link" href="/">
-          <div className="logo-div">
-            <BsBag />
-            <span className="logo-text">Home Heaven</span>
-          </div>
-        </a>
-        <ul className={`nav-list ${isOpenMenu ? 'isOpen' : ''}`}>
-          <a className="nav-list-item-link active-link" href="/">
-            <li className="nav-list-item">Home</li>
-          </a>
-          <a className="nav-list-item-link" href="/products">
-            <li className="nav-list-item">Products</li>
-          </a>
-          <div className="shopping-card">
-            <div className="icon-text">
-              <span>Cart</span>
-              <a href="/" className="cart-icon">
-                <BsBag />
-              </a>
+      <section ref={navRef}>
+        <nav>
+          <a className="nav-list-item-link" href="/">
+            <div className="logo-div">
+              <BsBag />
+              <span className="logo-text">Home Heaven</span>
             </div>
-            <span className="badge">0</span>
-          </div>
-        </ul>
-        <button className="hamburger" onClick={toggleMenu}>
-          {isOpenMenu ? <FaTimes /> : <FaBars />}
-        </button>
-      </nav>
-    </section>
-    <Outlet/>
+          </a>
+          <ul className={`nav-list ${isOpenMenu ? 'isOpen' : ''}`}>
+            <a className="nav-list-item-link active-link" href="/">
+              <li className="nav-list-item">Home</li>
+            </a>
+            <a className="nav-list-item-link" href="/products">
+              <li className="nav-list-item">Products</li>
+            </a>
+            <div className="shopping-card">
+              <div className="icon-text">
+                <span>Cart</span>
+                <a href="/" className="cart-icon">
+                  <BsBag />
+                </a>
+              </div>
+              <span className="badge">0</span>
+            </div>
+          </ul>
+          <button className="hamburger" onClick={toggleMenu}>
+            {isOpenMenu ? <FaTimes /> : <FaBars />}
+          </button>
+        </nav>
+      </section>
+      <section ref={heroRef}>
+        {/* Your hero section content here */}
+      </section>
+      <Outlet />
     </>
   );
 };

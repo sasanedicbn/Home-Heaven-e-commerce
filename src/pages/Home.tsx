@@ -10,18 +10,18 @@ import { RefsProvider } from './Refs/RefsProvider'
 
 
 
-const  Home: React.FC<NavBarProps> = () => {
+const  Home: React.FC<NavBarProps> = ({heroRef}) => {
 
 
   return (
     <>
-    <RefsProvider>
-      <Header/>
+    {/* <RefsProvider> */}
+      <Header heroRef={heroRef}/>
       <Featured />
       <FeaturedProducts/>
       <Creeds/>
       <Operations/>
-     </RefsProvider>
+     {/* </RefsProvider> */}
      </>
   )
 }

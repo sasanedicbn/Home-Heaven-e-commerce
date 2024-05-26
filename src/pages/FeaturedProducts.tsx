@@ -1,14 +1,14 @@
 import React from 'react';
 import FeaturedItem from "../components/FeaturedItem";
 import HomeSectionWrapper from './HomeSectionWrapper';
-import { useRefs } from "./Refs/RefsProvider";
+// import { useRefs } from "./Refs/RefsProvider";
 
 const FeaturedProducts = React.forwardRef<HTMLDivElement>((props, ref) => {
-  const { targetRef } = useRefs();
+  // const { targetRef } = useRefs();
 
   return (
     <HomeSectionWrapper title="FEATURED PRODUCTS" subTitle="The art of modern living unlocked.">
-      <section className="section-featured-products" ref={ref || targetRef}>
+      <section className="section-featured-products" >
         <div className="container-featured-products">
           <div className="feturedItem">
             <FeaturedItem name="Sofa Set" price="$1,299.99" img="public/FeturedProducts/product-1.jpeg" />
