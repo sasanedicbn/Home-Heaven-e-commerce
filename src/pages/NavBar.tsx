@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 import { NavBarProps } from '../types/types';
-import { useRefs } from './constants/constants';
 
 const NavBar: React.FC<NavBarProps> = () => {
-  const { heroRef, navRef } = useRefs();
+  const navRef = useRef();
   const [isOpenMenu, setOpenMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -14,9 +13,8 @@ const NavBar: React.FC<NavBarProps> = () => {
   };
 
   const handleScroll = () => {
-    if (heroRef.current && navRef.current) {
-      const heroBottom = heroRef.current.getBoundingClientRect().bottom;
-      if (window.scrollY > heroBottom) {
+    if (navRef.current) {
+      if (window.scrollY > 750) {
         navRef.current.classList.add('section-navbar');
       } else {
         navRef.current.classList.remove('section-navbar');

@@ -1,25 +1,25 @@
-import { createContext, useContext, useRef } from 'react';
+// import { createContext, useContext, useRef } from 'react';
 
-const RefsContext = createContext(null);
+// const RefsContext = createContext(null);
 
-  const RefsProvider = ({ children }) => {
-  const targetRef = useRef(null);
-  const heroRef = useRef(null);
-  const navRef = useRef(null);
+//   const RefsProvider = ({ children }) => {
+//   const targetRef = useRef(null);
+//   const heroRef = useRef(null);
+//   const navRef = useRef(null);
 
-  return (
-    <RefsContext.Provider value={{ targetRef, heroRef, navRef }}>
-      {children}
-    </RefsContext.Provider>
-  );
-};
+//   return (
+//     <RefsContext.Provider value={{ targetRef, heroRef, navRef }}>
+//       {children}
+//     </RefsContext.Provider>
+//   );
+// };
 
-const useRefs = () => {
-  const context = useContext(RefsContext);
-  if (!context) {
-    throw new Error('useRefs must be used within a RefsProvider');
-  }
-  return context;
-};
+// const useRefs = () => {
+//   const context = useContext(RefsContext);
+//   if (!context) {
+//     throw new Error('useRefs must be used within a RefsProvider');
+//   }
+//   return context;
+// };
 
-export { RefsProvider, useRefs };
+// export { RefsProvider, useRefs };
