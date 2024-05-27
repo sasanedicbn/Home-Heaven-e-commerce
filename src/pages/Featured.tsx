@@ -1,10 +1,8 @@
 
 import HomeSectionWrapper from "./HomeSectionWrapper";
-// import { useRefs } from "./Refs/RefsProvider";
 
 
 const Featured = () => {
-    // const {heroRef } = useRefs();
 
     return(
         <HomeSectionWrapper title="" subTitle="">
