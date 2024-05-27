@@ -2,11 +2,13 @@
 import { FaStar, FaEye, FaBook } from 'react-icons/fa';
 import CreedsItem from '../components/CreedsItem';
 import HomeSectionWrapper from './HomeSectionWrapper';
+import { useRefs } from './Refs/RefsProvider';
 
 const Creeds = () => {
+    const {creedsRef} = useRefs()
     return(
         <HomeSectionWrapper title="CREEDS WE LIVE BY" subTitle='Elevate your home with our attitude of excellence and timeless style.'>
-        <section className="section-creeds">
+        <section className="section-creeds" ref={creedsRef}>
             <div className="container-creeds">
                 <div className="creeds-items">
                     <CreedsItem 

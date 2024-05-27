@@ -1,4 +1,4 @@
-import  { createContext, useContext, useRef, useEffect } from 'react';
+import React, { createContext, useContext, useRef, useEffect } from 'react';
 
 const RefsContext = createContext(null);
 
@@ -14,9 +14,11 @@ const RefsProvider = ({ children }) => {
     const handleIntersect = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add('section-visible');
+          entry.target.classList.remove('section-hidden');
         } else {
-          entry.target.classList.remove('visible');
+          entry.target.classList.add('section-hidden');
+          entry.target.classList.remove('section-visible');
         }
       });
     };
@@ -26,18 +28,21 @@ const RefsProvider = ({ children }) => {
       threshold: 0.15,
     });
 
-
     Object.values(refs).forEach(ref => {
-      if (ref.current) observer.observe(ref.current);
+      if (ref.current) {
+        ref.current.classList.add('section-hidden'); // Initial hidden state
+        observer.observe(ref.current);
+      }
     });
 
-  
     return () => {
       Object.values(refs).forEach(ref => {
-        if (ref.current) observer.unobserve(ref.current);
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
       });
     };
-  }, [refs]);
+  }, []);
 
   return (
     <RefsContext.Provider value={refs}>

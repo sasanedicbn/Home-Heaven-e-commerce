@@ -5,6 +5,7 @@ import FeaturedProducts from './FeaturedProducts'
 import Header from './Header'
 import Operations from './Operations'
 import { NavBarProps } from '../types/types'
+import { RefsProvider } from './Refs/RefsProvider'
 
 
 
@@ -13,13 +14,13 @@ const  Home: React.FC<NavBarProps> = () => {
 
   return (
     <>
-    {/* <RefsProvider> */}
+    <RefsProvider>
       <Header/>
       <Featured />
       <FeaturedProducts/>
       <Creeds/>
       <Operations/>
-     {/* </RefsProvider> */}
+     </RefsProvider>
      </>
   )
 }
