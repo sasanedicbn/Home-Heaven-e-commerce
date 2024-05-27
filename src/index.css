@@ -497,3 +497,14 @@ padding-bottom: 5rem;
   margin: 0 auto;
 }
 /* FOR ANIMATION */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8%);
+  transition: all 2s ease-in-out;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 2s ease-in-out;
+}
