@@ -1,7 +1,7 @@
 import { IconType } from 'react-icons';
 import { FaWind, FaHeadset, FaLightbulb, FaUndo,  } from 'react-icons/fa';
 
-interface Operation {
+type Operation = {
   id: number;
   button: string;
   icon: IconType; 
@@ -9,7 +9,7 @@ interface Operation {
   description: string;
 }
 
- export const operationsData: Operation[] = [
+ const operationsData: Operation[] = [
     {
         id: 1,
         button: 'Swift Delivery',
@@ -39,3 +39,4 @@ interface Operation {
         description: 'Explicabo ipsum Error sit ametperspiciati consectetur voluptatibus elit. Error accusamus arc explicabo explictecto minus sint, se blanditiis iusto dolor, temporibus aperiam explicabo est ex harum eligendi quia ipsa fugit sit amet architecto.'
     }
 ]; 
+export default operationsData;
