@@ -1,6 +1,6 @@
 
 
-const CreedsItem = ({ icon: Icon, title, description }) => {
+const CreedsItem = ({ icon: Icon, title, description }:{icon: string, title:string, description: string}) => {
     return(
         <div className="creeds-cards">
             <article className="creed-article">
