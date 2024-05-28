@@ -30,7 +30,7 @@ const RefsProvider = ({ children }) => {
 
     Object.values(refs).forEach(ref => {
       if (ref.current) {
-        ref.current.classList.add('section-hidden'); // Initial hidden state
+        ref.current.classList.add('section-hidden'); 
         observer.observe(ref.current);
       }
     });

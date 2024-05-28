@@ -1,4 +1,5 @@
 const FeaturedItem = ({name,price,img}:{name:string,price:string,img:string}) => {
+    console.log(name, img,                 price)
     return(
         <div className="container-featured-items">
         <article className="featured-product-card">
