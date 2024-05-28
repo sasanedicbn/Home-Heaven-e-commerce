@@ -511,4 +511,40 @@ padding-bottom: 5rem;
   background-color: red;
   height: 22.5rem;
   margin-bottom: 2rem;
+  width: 70%;
+  margin: 0 auto;
 }
+/* operations style for */
+.oparation-btn {
+  width: 160px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.oparation-btn:hover {
+  background-color: #0056b3;
+}
+
+.oparation-btn.active {
+  background-color: #0056b3;
+}
+.operations-btns{
+  display: flex;
+  justify-content: space-between;
+  gap:22px;
+}
+.activeOparations{
+  background-color: black;
+}
+
+/* .container-operations {
+  display: flex;
+  align-items: center;
+} */
