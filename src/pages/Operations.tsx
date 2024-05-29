@@ -33,10 +33,12 @@ const Operations = () => {
                         {operationData.map((item) => (
                             activeTab === item.id && (
                                 <div key={item.id} className={`operations-item`}>
+                                   <div className="operations-tab-content-details">
                                     <div className="operations-icon">
                                         <item.icon />
                                     </div>
                                     <h3 className="operations-title">{item.title}</h3>
+                                    </div>
                                     <p className="operations-paragraph">{item.description}</p>
                                 </div>
                             )

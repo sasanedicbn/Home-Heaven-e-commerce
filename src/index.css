@@ -508,19 +508,21 @@ padding-bottom: 5rem;
 }
 /* OPERATIONS */
 .section-operations{
-  background-color: red;
+  padding: 1.5rem;
   height: 22.5rem;
   margin-bottom: 2rem;
   width: 70%;
   margin: 0 auto;
+  background-color: rgb(231, 231, 255);
+  margin-bottom: 10rem;;
 }
 /* operations style for */
 .oparation-btn {
   width: 160px;
   padding: 10px 15px;
   border: none;
-  background-color: #007bff;
-  color: white;
+  background-color: #fff;
+  /* color: white; */
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -529,11 +531,12 @@ padding-bottom: 5rem;
 }
 
 .oparation-btn:hover {
-  background-color: #0056b3;
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
 .oparation-btn.active {
-  background-color: #0056b3;
+  background-color: var(--color-primary);
 }
 .operations-btns{
   display: flex;
@@ -541,10 +544,35 @@ padding-bottom: 5rem;
   gap:22px;
 }
 .activeOparations{
-  background-color: black;
+  background-color: var(--color-primary);
+  color: #fff;
 }
-
-/* .container-operations {
+.operations-tab-content{
+  padding: 4rem 2rem;
+  font-size: 18px;
+}
+.operations-item{
+ display: flex;
+ flex-direction: column;
+}
+.operations-tab-content-details{
   display: flex;
   align-items: center;
-} */
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.operations-icon svg{
+  color:#0056b3;
+  width:44px;
+  height: 44px;
+  padding: 9px;
+  background-color: rgb(115, 117, 227);
+  color: #fff;
+  border-radius: 50%;
+}
+.operations-paragraph{
+  padding-left: 4rem;
+  line-height: 1.8;
+}
+
