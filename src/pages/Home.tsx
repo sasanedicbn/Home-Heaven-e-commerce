@@ -6,6 +6,7 @@ import Header from './Header'
 import Operations from './Operations'
 import { NavBarProps } from '../types/types'
 import { RefsProvider } from './Refs/RefsProvider'
+import Testimonials from './Testimonials'
 
 
 
@@ -20,6 +21,7 @@ const  Home: React.FC<NavBarProps> = () => {
       <FeaturedProducts/>
       <Creeds/>
       <Operations/>
+      <Testimonials/>
      </RefsProvider>
      </>
   )

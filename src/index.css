@@ -514,8 +514,11 @@ padding-bottom: 5rem;
   width: 70%;
   margin: 0 auto;
   background-color: rgb(231, 231, 255);
-  margin-bottom: 10rem;;
+  /* margin-bottom: 10rem;; */
 }
+/* .section-operations{
+
+} */
 /* operations style for */
 .oparation-btn {
   width: 160px;
@@ -575,4 +578,7 @@ padding-bottom: 5rem;
   padding-left: 4rem;
   line-height: 1.8;
 }
-
+/* .container-operations{
+  border-bottom: 1px solid orange;
+  paddin
+} */
