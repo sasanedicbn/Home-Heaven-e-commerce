@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import HomeSectionWrapper from "./HomeSectionWrapper";
 import operationsData from "./constants/constants";
+import { useRefs } from "./Refs/RefsProvider";
 
 const Operations = () => {
     const [operationData, setOperationData] = useState([]);
     const [activeTab, setActiveTab] = useState(1);
+    const {operationsRef} = useRefs()
 
     useEffect(() => {
         setOperationData(operationsData);
@@ -16,7 +18,7 @@ const Operations = () => {
 
     return (
         <HomeSectionWrapper title="OPERATIONS" subTitle="Where simplicity meets efficiency to bring your home to life.">
-            <section className="section-operations">
+            <section className="section-operations" ref={operationsRef}>
                 <div className="container-operations">
                     <div className="operations-btns">
                         {operationData.map((btn) => (
