@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import HomeSectionWrapper from "./HomeSectionWrapper";
-import operationsData from "./constants/constants";
+import {operationsData} from "./constants/constants";
 import { useRefs } from "./Refs/RefsProvider";
 
 const Operations = () => {
