@@ -4,7 +4,7 @@ import operationsData from "./constants/constants";
 
 const Operations = () => {
     const [operationData, setOperationData] = useState([]);
-    const [activeTab, setActiveTab] = useState(null);
+    const [activeTab, setActiveTab] = useState(1);
 
     useEffect(() => {
         setOperationData(operationsData);
