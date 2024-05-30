@@ -13,7 +13,7 @@ const Testimonials = () => {
     >
         <section className="testimonials-section">
             <div className="slider">
-                <button  className="slider-btn">
+                <button  className="slider-btn btn-left">
                     <FaArrowLeft />
                 </button>
                 {testimonialData.map(testimonial => (
@@ -32,7 +32,7 @@ const Testimonials = () => {
                         </div>
                     )
                 ))}
-                <button className="slider-btn">
+                <button className="slider-btn btn-right">
                     <FaArrowRight />
                 </button>
             </div>

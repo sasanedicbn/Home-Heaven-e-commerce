@@ -581,12 +581,14 @@ padding-bottom: 5rem;
 }
 .section-testimonials{
   background-color: red;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 .slider{
-  width: 45%;
+  width: 52.5%;
   margin: 0 auto;
+  position: relative;
+  padding: 0 3rem;
 }
 
 .testimonial-card h3{
@@ -609,4 +611,28 @@ padding-bottom: 5rem;
 .testimonial-location{
   margin-top: .2rem;
   color: rgb(80, 80, 80);
+}
+.slider-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.slider-btn svg{
+  width: 16px;
+  height: 28px;
+  color: rgb(97, 97, 97);
+}
+.btn-left{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-70%,-50%);
+}
+.btn-right{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(70%, -50%)
 }
