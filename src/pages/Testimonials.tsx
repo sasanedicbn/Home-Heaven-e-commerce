@@ -5,7 +5,16 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Testimonials = () => {
     const [activeSlider, setActiveSlider] = useState(1);
+    
+    const handlePrevious = () => {
+        setActiveSlider(prev => prev === 1 ? testimonialData.length : prev - 1);
+    };
 
+    const handleNext = () => {
+        setActiveSlider(prev => prev === testimonialData.length ? 1 : prev + 1);
+    };
+
+    
     return (
         <HomeSectionWrapper 
         title="TESTIMONIALS" 
@@ -13,7 +22,7 @@ const Testimonials = () => {
     >
         <section className="testimonials-section">
             <div className="slider">
-                <button  className="slider-btn btn-left">
+                <button  className="slider-btn btn-left" onClick={handlePrevious}>
                     <FaArrowLeft />
                 </button>
                 {testimonialData.map(testimonial => (
@@ -32,7 +41,7 @@ const Testimonials = () => {
                         </div>
                     )
                 ))}
-                <button className="slider-btn btn-right">
+                <button className="slider-btn btn-right" onClick={handleNext}>
                     <FaArrowRight />
                 </button>
             </div>

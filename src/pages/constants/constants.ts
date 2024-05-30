@@ -70,7 +70,7 @@ export const testimonialData = [
         id:4,
         title:'You guys brought vision back to my life.',
         description: 'I cannot speak highly enough of the quality of the products I received from this company. The attention to detail and craftsmanship is unparalleled. I am so grateful to have found such a reliable and professional source for my furniture needs.',
-        img:'public/Testimonial-img/testimonial-4.jpg',
+        img:'public/Testimonial-img/testimoniall-4.jpg',
         name:'Tyron Mayers',
         location:'San Francisco, USA',
     }
