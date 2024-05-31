@@ -4,14 +4,16 @@ import { testimonialData } from "./constants/constants";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Testimonials = () => {
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
+    const [activeIndex, setActiveIndex] = useState(1);
+    
+    
 
     const nextSlide = () => {
-        setCurrentSlideIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
+        setActiveIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
     };
 
     const previousSlide = () => {
-        setCurrentSlideIndex(prev => (prev === 0 ? testimonialData.length - 1 : prev - 1));
+        setActiveIndex(prev => (prev === 0 ? testimonialData.length - 1 : prev - 1));
     };
 
     useEffect(() => {
@@ -34,7 +36,7 @@ const Testimonials = () => {
                             <div
                                 key={testimonial.id}
                                 className="testimonial-card"
-                                style={{ transform: `translateX(${100 * (index - currentSlideIndex)}%)` }}
+                                style={{ transform: `translateX(${100 * (index - activeIndex)}%)` }}
                             >
                                 <h3 className="testimonial-title">{testimonial.title}</h3>
                                 <div className="underline"></div>
