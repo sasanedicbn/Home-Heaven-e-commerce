@@ -14,7 +14,11 @@ const Testimonials = () => {
         setCurrentSlideIndex(prev => (prev === 0 ? testimonialData.length - 1 : prev - 1));
     };
 
-  
+    useEffect(() => {
+        const interval = setInterval(() => nextSlide(), 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <HomeSectionWrapper
             title="TESTIMONIALS"
