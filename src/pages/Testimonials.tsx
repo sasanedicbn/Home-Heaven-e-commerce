@@ -6,6 +6,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const Testimonials = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
+
     const nextSlide = () => {
         setActiveIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
     };
@@ -15,9 +16,10 @@ const Testimonials = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(() => nextSlide(), 5000);
+        const interval = setInterval(() => nextSlide(),8000);
         return () => clearInterval(interval);
     }, []);
+     console.log(activeIndex)
 
     return (
         <HomeSectionWrapper
