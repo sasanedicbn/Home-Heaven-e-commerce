@@ -30,7 +30,7 @@ const Testimonials = () => {
                             <div
                                 key={testimonial.id}
                                 className="testimonial-card"
-                             
+                                style={{ transform: `translateX(${100 * (index - currentSlideIndex)}%)` }}
                             >
                                 <h3 className="testimonial-title">{testimonial.title}</h3>
                                 <div className="underline"></div>
