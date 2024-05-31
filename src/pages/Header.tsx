@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HomeSectionWrapper from './HomeSectionWrapper';
 import { useRefs } from './Refs/RefsProvider';
 
@@ -26,9 +27,9 @@ const Header = () => {
               <p className="header-paragraph">Create your perfect space with our designs.</p>
             </div>
             <div>
-              <a href="/">
+              <Link to="/products">
                 <button className="btn btn-header-explore">Explore products</button>
-              </a>
+              </Link>
               <button className="btn btn-header-about" onClick={handleLearnMoreClick}>Learn more 🠣</button>
             </div>
           </div>

@@ -4,9 +4,7 @@ import { testimonialData } from "./constants/constants";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Testimonials = () => {
-    const [activeIndex, setActiveIndex] = useState(1);
-    
-    
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const nextSlide = () => {
         setActiveIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
