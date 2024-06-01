@@ -650,16 +650,18 @@ padding-bottom: 5rem;
   transition: transform 0.5s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+  
   position: absolute;
 }
 .underline {
-  height: 10px;
+  height: 2px;
   width: 0%;
-  background-color: red;
-  color: red;
-  /* transition: width 5s linear;  */
+  background-color: blue;
+  transition: width 1s linear;
+  margin-bottom: .5rem;
+}
 }
 
 

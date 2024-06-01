@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import HomeSectionWrapper from "./HomeSectionWrapper";
 import { testimonialData } from "./constants/constants";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -8,20 +8,20 @@ const Testimonials = () => {
     const [underlineWidth, setUnderlineWidth] = useState(0);
     const underlineRef = useRef();
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setActiveIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
         setUnderlineWidth(0); 
-    };
+    }, [testimonialData.length]);
 
-    const previousSlide = () => {
+    const previousSlide = useCallback(() => {
         setActiveIndex(prev => (prev === 0 ? testimonialData.length - 1 : prev - 1));
         setUnderlineWidth(0); 
-    };
+    }, [testimonialData.length]);
 
     useEffect(() => {
         const interval = setInterval(() => nextSlide(), 5000);
         return () => clearInterval(interval);
-    }, []);
+    }, [nextSlide]);
 
     useEffect(() => {
         if (underlineRef.current) {
@@ -88,3 +88,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
