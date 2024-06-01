@@ -24,10 +24,6 @@ const Testimonials = () => {
     }, [nextSlide]);
 
     useEffect(() => {
-        if (underlineRef.current) {
-            underlineRef.current.style.backgroundColor = "blue";
-        }
-        
         const widthInterval = setInterval(() => {
             setUnderlineWidth(prevWidth => {
                 if (prevWidth < 100) {
