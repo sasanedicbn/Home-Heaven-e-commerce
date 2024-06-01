@@ -42,7 +42,11 @@ const Testimonials = () => {
         return () => clearInterval(widthInterval);
     }, [activeIndex]);
 
- 
+    useEffect(() => {
+        if (underlineRef.current) {
+            underlineRef.current.style.width = `${underlineWidth}%`;
+        }
+    }, [underlineWidth]);
 
     return (
         <HomeSectionWrapper
