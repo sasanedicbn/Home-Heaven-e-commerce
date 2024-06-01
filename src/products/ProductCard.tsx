@@ -9,9 +9,6 @@ const ProductCard = ({ product }) => {
                 <span className="price">${(price / 100).toFixed(2)}</span>
             </div>
             <p className="description">{description}</p>
-            <div className="btn-container">
-                <button>Details</button>
-            </div>
         </article>
     );
 };
