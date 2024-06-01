@@ -1,25 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import HomeSectionWrapper from "./HomeSectionWrapper";
 import { testimonialData } from "./constants/constants";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Testimonials = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-
+    const [underlineWidth, setUnderlineWidth] = useState(0);
+    const underlineRef = useRef();
 
     const nextSlide = () => {
         setActiveIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
+        setUnderlineWidth(0); 
     };
 
     const previousSlide = () => {
         setActiveIndex(prev => (prev === 0 ? testimonialData.length - 1 : prev - 1));
+        setUnderlineWidth(0); 
     };
 
     useEffect(() => {
-        const interval = setInterval(() => nextSlide(),8000);
+        const interval = setInterval(() => nextSlide(), 5000);
         return () => clearInterval(interval);
     }, []);
-     console.log(activeIndex)
+
+    useEffect(() => {
+        if (underlineRef.current) {
+            underlineRef.current.style.backgroundColor = "blue";
+        }
+        
+        const widthInterval = setInterval(() => {
+            setUnderlineWidth(prevWidth => {
+                if (prevWidth < 100) {
+                    return prevWidth + 20;
+                } else {
+                    clearInterval(widthInterval);
+                    return prevWidth;
+                }
+            });
+        }, 1000);
+
+        return () => clearInterval(widthInterval);
+    }, [activeIndex]);
+
+ 
 
     return (
         <HomeSectionWrapper
@@ -39,7 +62,7 @@ const Testimonials = () => {
                                 style={{ transform: `translateX(${100 * (index - activeIndex)}%)` }}
                             >
                                 <h3 className="testimonial-title">{testimonial.title}</h3>
-                                <div className="underline"></div>
+                                <div className="underline" ref={index === activeIndex ? underlineRef : null}></div>
                                 <p className="testimonial-description">{testimonial.description}</p>
                                 <img
                                     src={testimonial.img}

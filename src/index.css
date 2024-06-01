@@ -656,7 +656,7 @@ padding-bottom: 5rem;
 }
 .underline {
   height: 10px;
-  /* width: 200px; */
+  width: 0%;
   background-color: red;
   color: red;
   /* transition: width 5s linear;  */
