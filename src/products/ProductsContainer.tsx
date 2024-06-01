@@ -1,6 +1,7 @@
 import  { useState, useEffect } from 'react';
+import Products from './Products';
 
-const Products = () => {
+const ProductsContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -22,18 +23,10 @@ const Products = () => {
  console.log(products)
 
   return (
-    <div>
-      <h2>Products</h2>
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            <h3>{product.title}</h3>
-            <p>{product.price}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+   <>
+     <Products products={products}/>
+   </>
   );
 };
 
-export default Products;
+export default ProductsContainer;

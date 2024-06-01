@@ -1,6 +1,6 @@
-const Products = () => {
+const Products = ({products}) => {
     return(
-
+       <div>SASA</div>
     )
 }
 
