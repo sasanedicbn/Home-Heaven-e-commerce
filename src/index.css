@@ -640,8 +640,10 @@ padding-bottom: 5rem;
 .slider-wrapper {
   display: flex;
   overflow: hidden;
-  width: 100%;
+  width: 550px;
+  height: 350px;
   position: relative;
+
 }
 .testimonial-card {
   min-width: 100%;
@@ -650,6 +652,7 @@ padding-bottom: 5rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: absolute;
 }
 .underline {
   height: 10px;
