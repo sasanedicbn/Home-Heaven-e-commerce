@@ -1,13 +1,16 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Products from './Products';
 import SideBarProducts from './SideBarProducts';
+import Spinner from '../components/Spinner';
 
 const ProductsContainer = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const response = await fetch('https://www.course-api.com/react-store-products');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
@@ -15,20 +18,28 @@ const ProductsContainer = () => {
         const data = await response.json();
         setProducts(data);
       } catch (error) {
-        console.log('error')
+        console.log('error');
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
- console.log(products)
 
   return (
-   <div className='products-container'>
-      <SideBarProducts/>
-     <Products products={products}/>
-   </div>
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="products-container">
+          <SideBarProducts />
+          <Products products={products} />
+        </div>
+      )}
+    </>
   );
 };
 
 export default ProductsContainer;
+
