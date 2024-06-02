@@ -732,7 +732,19 @@ padding-bottom: 5rem;
 .product-card .btn-container button:hover {
   background-color: #c53030;
 }
-
-
+.products{
+  display: flex;
+  flex-direction: column;
+}
+.products-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-line{
+  width: 500px;
+  height: 2px;
+  background-color: white;
+}
 
 /* ssssssssssssssssssssss */
