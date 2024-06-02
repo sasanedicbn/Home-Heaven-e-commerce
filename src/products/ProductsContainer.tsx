@@ -1,5 +1,6 @@
 import  { useState, useEffect } from 'react';
 import Products from './Products';
+import SideBarProducts from './SideBarProducts';
 
 const ProductsContainer = () => {
   const [products, setProducts] = useState([]);
@@ -23,9 +24,10 @@ const ProductsContainer = () => {
  console.log(products)
 
   return (
-   <>
+   <div className='products-container'>
+      <SideBarProducts/>
      <Products products={products}/>
-   </>
+   </div>
   );
 };
 
