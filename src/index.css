@@ -667,13 +667,23 @@ padding-bottom: 5rem;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
-  /* background-color: red; */
   padding: 0 4rem;
 }
 .sidebar-container{
   background-color: orange;
   width: 17.5%;
   margin-right: 1.5rem;
+}
+.sort-products label{
+ font-size: 18px;
+ color: #444;
+ margin-right: 6px;
+}
+.sort-products select{
+  padding: 4px;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* PRODUCTS */
@@ -686,20 +696,17 @@ padding-bottom: 5rem;
 .product-card {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
+  margin-bottom: .5rem;
+  padding:1rem .5rem;
   gap: 1rem;
   width: 100%;
   transition: all 0.7s;
-  border: 1px solid #cbd5e0;
-  border-radius: 0.375rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
   margin: 0 auto;
   width: 100%;
   object-fit: cover;
-  border-radius: 0.375rem;
   cursor: pointer;
   height: 180px;
 }
@@ -710,7 +717,7 @@ padding-bottom: 5rem;
   font-size: 1.25rem;
 }
 
-.product-card h2 {
+.product-card h5 {
   text-transform: capitalize;
   font-weight: 600;
   color: #4a5568;
@@ -718,7 +725,8 @@ padding-bottom: 5rem;
 
 .product-card .price {
   font-weight: 600;
-  color: #e53e3e;
+  color: var(--color-primary);
+  font-size: 17px;
 }
 
 .product-card .description {
@@ -741,11 +749,12 @@ padding-bottom: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 .header-line{
   width: 500px;
-  height: 2px;
-  background-color: white;
+  height: 3px;
+  background-color: var(--color-primary);
 }
 /* SIDEBAR */
 .sidebar-container {
@@ -753,7 +762,7 @@ padding-bottom: 5rem;
     padding: 16px;
     transition: transform 0.7s ease;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     height: 670px;
 }
 
@@ -770,15 +779,15 @@ padding-bottom: 5rem;
 
 .heading {
     font-weight: 500;
-    margin-top: 16px;
-    margin-bottom: 8px;
+    margin-top: 18px;
+    margin-bottom: 10px;
     font-size: 1rem;
 }
 
 .category-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     list-style-type: none;
 }
 .color-list{
@@ -845,6 +854,7 @@ padding-bottom: 5rem;
 .shipping-checkbox {
     width: 12px;
     height: 12px;
+    margin-top: 10px;
 }
 
 .clear-filters-btn {
@@ -853,12 +863,13 @@ padding-bottom: 5rem;
     justify-content: center;
     font-weight: 600;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 10px 18px;
     font-size: 0.875rem;
     background-color: #ef4444;
     color: #fef2f2;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    border: none;
 }
 
 .clear-filters-btn:hover {
