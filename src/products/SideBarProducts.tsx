@@ -1,16 +1,13 @@
 
 const SideBarProducts = ({products}) => {
+    const uniqueCategories = [...new Set(products.map(product => product.category))];
     console.log()
     return (
         <aside className="sidebar-container">
             <input type="text" id="search" placeholder="Search" className="search-input" />
             <h3 className="heading">Category</h3>
             <ul className="category-list">
-            {/* treba setovati sve */}
-              {products.map(product => {
-              console.log([product.category])
-              }
-              )}
+           
                 {/* new setovati */}
                 <li className="category-item active" data-category="All">All</li>
                 <li className="category-item" data-category="living room">Living Room</li>
