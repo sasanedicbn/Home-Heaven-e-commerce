@@ -1,7 +1,9 @@
 
 const SideBarProducts = ({products}) => {
     const uniqueCategories = [...new Set(products.map(product => product.category))];
-    console.log()
+    const uniqueCompany = [...new Set(products.map((product) => product.company))]
+    console.log(uniqueCategories)
+    console.log(uniqueCompany)
     return (
         <aside className="sidebar-container">
             <input type="text" id="search" placeholder="Search" className="search-input" />
@@ -15,10 +17,9 @@ const SideBarProducts = ({products}) => {
             <h3 className="heading">Company</h3>
             <select className="company-select">
                 <option value="All">All</option>
-                <option value="liddy">Liddy</option>
-                <option value="marcos">Marcos</option>
-                <option value="caressa">Caressa</option>
-                <option value="ikea">Ikea</option>
+                {uniqueCompany.map((company, index) => (
+                    <option key={index} value={company}>{company}</option>
+                ))}
             </select>
             <h3 className="heading">Color</h3>
             <ul className="color-list">
