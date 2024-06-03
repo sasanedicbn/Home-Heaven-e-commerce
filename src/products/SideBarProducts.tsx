@@ -7,8 +7,10 @@ const SideBarProducts = ({products}) => {
             <input type="text" id="search" placeholder="Search" className="search-input" />
             <h3 className="heading">Category</h3>
             <ul className="category-list">
-           
-             
+                <li className="category-item active" data-category="All">All</li>
+                {uniqueCategories.map((category, index) => (
+                    <li key={index} className="category-item" data-category={category}>{category}</li>
+                ))}
             </ul>
             <h3 className="heading">Company</h3>
             <select className="company-select">
