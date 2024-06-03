@@ -33,7 +33,7 @@ const ProductsContainer = () => {
         <Spinner />
       ) : (
         <div className="products-container">
-          <SideBarProducts />
+          <SideBarProducts products={products}/>
           <Products products={products} />
         </div>
       )}

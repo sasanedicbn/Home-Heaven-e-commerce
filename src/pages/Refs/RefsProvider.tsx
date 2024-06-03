@@ -7,7 +7,8 @@ const RefsProvider = ({ children }) => {
     heroRef: useRef(null),
     featuredRef: useRef(null),
     creedsRef: useRef(null),
-    operationsRef: useRef(null)
+    operationsRef: useRef(null),
+    testimonialRef: useRef(null)
   };
 
   useEffect(() => {
@@ -35,13 +36,6 @@ const RefsProvider = ({ children }) => {
       }
     });
 
-    return () => {
-      Object.values(refs).forEach(ref => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
   }, []);
 
   return (
