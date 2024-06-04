@@ -1,17 +1,42 @@
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../store/productsFilters";
 
-const SideBarProducts = ({products}) => {
+const SideBarProducts = () => {
+    const dispatch = useDispatch()
+    const filters = useSelector(state => state.filters.filters)
+    const products = useSelector(state => state.filters.products)
+    console.log('prprr', products)
+    const filteresData = useSelector(state => state.filters.filteresData)
+    console.log('filt',filteresData)
+    // console.log(filters)
+
     const uniqueCategories = [...new Set(products.map(product => product.category))];
     const uniqueCompany = [...new Set(products.map((product) => product.company))]
-    console.log(uniqueCategories)
-    console.log(uniqueCompany)
+
+    const handleInputChange = (key,value) => {
+        console.log(key,value)
+     dispatch(setFilter({key,value}))
+    }
+  
     return (
         <aside className="sidebar-container">
-            <input type="text" id="search" placeholder="Search" className="search-input" />
+            <input type="text" id="search" placeholder="Search" className="search-input" onChange={(e) => handleInputChange('search','s')}/>
             <h3 className="heading">Category</h3>
             <ul className="category-list">
-                <li className="category-item active" data-category="All">All</li>
+                <li
+                    className={`category-item ${filters.category === 'All' ? 'active' : ''}`}
+                    onClick={() => handleInputChange('category', 'All')}
+                >
+                    All
+                </li>
                 {uniqueCategories.map((category, index) => (
-                    <li key={index} className="category-item" data-category={category}>{category}</li>
+                    <li
+                        key={index}
+                        className={`category-item ${filters.category === category ? 'active' : ''}`}
+                        onClick={() => handleInputChange('category', category)}
+                    >
+                        {category}
+                    </li>
                 ))}
             </ul>
             <h3 className="heading">Company</h3>

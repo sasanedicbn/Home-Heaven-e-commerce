@@ -3,6 +3,8 @@ import './App.css';
 import Home from './pages/Home';
 import NavBar from './pages/NavBar';
 import ProductsContainer from './products/ProductsContainer';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
 
@@ -18,7 +20,9 @@ function App() {
   ]);
 
   return (
+    <Provider  store={store}>
      <RouterProvider router={router} />
+     </Provider>
  
   );
 }

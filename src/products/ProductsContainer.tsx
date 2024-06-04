@@ -2,11 +2,17 @@ import { useState, useEffect } from 'react';
 import Products from './Products';
 import SideBarProducts from './SideBarProducts';
 import Spinner from '../components/Spinner';
+import { useDispatch, useSelector } from 'react-redux';
+import { setProducts } from '../store/productsFilters';
 
 const ProductsContainer = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch()
+  // const products = useSelector(state => state.filters.products)
+  // const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const getProducts = (product) => {
+     dispatch(setProducts(product))
+  }
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -16,7 +22,7 @@ const ProductsContainer = () => {
           throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        setProducts(data);
+        getProducts(data)
       } catch (error) {
         console.log('error');
       } finally {
@@ -33,8 +39,8 @@ const ProductsContainer = () => {
         <Spinner />
       ) : (
         <div className="products-container">
-          <SideBarProducts products={products}/>
-          <Products products={products} />
+          <SideBarProducts />
+          <Products />
         </div>
       )}
     </>
