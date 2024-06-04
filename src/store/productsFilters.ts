@@ -1,3 +1,4 @@
+// store/productsFiltersSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialFilters = {
@@ -8,25 +9,25 @@ const initialFilters = {
     price: 309999,
     shipping: false,
     sort: "lowest",
-  };
-const productsFilters = createSlice({
+};
+
+const productsFiltersSlice = createSlice({
     name: 'filters',
-    initialState:{
-      products:[],
-      filters:initialFilters,
-      filteredProducts: [],
+    initialState: {
+        products: [],
+        filters: initialFilters,
+        filteredProducts: [],
     },
-    reducers:{
-      setProducts:(state, action)=> {
-           state.products = action.payload
-        //    state.filteredProducts.push(state.products)
-      },
-      setFilter:(state, action) => {
-       state.filters[action.payload.key] = action.payload.value
-      },
-    }
-})
-export const { setFilter, setProducts } = productsFilters.actions;
-export default productsFilters.reducer
+    reducers: {
+        setProducts: (state, action) => {
+            state.products = action.payload;
+            state.filteredProducts = action.payload;
+        },
+        setFilter: (state, action) => {
+            state.filters[action.payload.key] = action.payload.value;
+        },
+    },
+});
 
-
+export const { setFilter, setProducts } = productsFiltersSlice.actions;
+export default productsFiltersSlice.reducer;

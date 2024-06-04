@@ -2,34 +2,31 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../store/productsFilters";
 
 const SideBarProducts = () => {
-    const dispatch = useDispatch()
-    const filters = useSelector(state => state.filters.filters)
-    const products = useSelector(state => state.filters.products)
-    console.log('prprr', products)
-    const filteresData = useSelector(state => state.filters.filteresData)
-    console.log('filt',filteresData)
-    // console.log(filters)
+    const dispatch = useDispatch();
+    const filters = useSelector(state => state.filters.filters);
+    const products = useSelector(state => state.filters.products);
 
-    const uniqueCategories = [...new Set(products.map(product => product.category))];
-    const uniqueCompany = [...new Set(products.map((product) => product.company))]
+    const handleInputChange = (key, value) => {
+        dispatch(setFilter({ key, value }));
+    };
 
-    const handleInputChange = (key,value) => {
-        console.log(key,value)
-     dispatch(setFilter({key,value}))
-    }
-  
+    // Filtriranje proizvoda na osnovu odabrane kategorije
+    const filteredProducts = products.filter(product => {
+        return filters.category === 'All' || product.category === filters.category;
+    });
+
     return (
         <aside className="sidebar-container">
-            <input type="text" id="search" placeholder="Search" className="search-input" onChange={(e) => handleInputChange('search','s')}/>
-            <h3 className="heading">Category</h3>
+            <input type="text" id="search" placeholder="Pretraga" className="search-input" onChange={(e) => handleInputChange('search', e.target.value)} />
+            <h3 className="heading">Kategorija</h3>
             <ul className="category-list">
                 <li
                     className={`category-item ${filters.category === 'All' ? 'active' : ''}`}
                     onClick={() => handleInputChange('category', 'All')}
                 >
-                    All
+                    Sve
                 </li>
-                {uniqueCategories.map((category, index) => (
+                {filteredProducts.map((category, index) => (
                     <li
                         key={index}
                         className={`category-item ${filters.category === category ? 'active' : ''}`}
