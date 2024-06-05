@@ -30,7 +30,10 @@ const productsFiltersSlice = createSlice({
             state.filteredProducts = filterProducts(state.products, state.filters);
         
         },
-      
+        resetFilters:(state) => {
+            state.filters = initialFilters
+            state.filteredProducts = state.products
+        }
     },
 });
 
