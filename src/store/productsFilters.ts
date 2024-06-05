@@ -1,4 +1,3 @@
-// store/productsFiltersSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialFilters = {
@@ -10,6 +9,7 @@ const initialFilters = {
     shipping: false,
     sort: "lowest",
 };
+
 
 const productsFiltersSlice = createSlice({
     name: 'filters',
