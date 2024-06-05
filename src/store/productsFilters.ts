@@ -24,10 +24,28 @@ const productsFiltersSlice = createSlice({
             state.filteredProducts = action.payload;
         },
         setFilter: (state, action) => {
+            console.log('action',action)
             state.filters[action.payload.key] = action.payload.value;
+            console.log(action)
+            state.filteredProducts = filterProducts(state.products, state.filters);
+        
         },
+      
     },
 });
 
-export const { setFilter, setProducts } = productsFiltersSlice.actions;
+const filterProducts = (products, filters) => {
+    return products.filter(product => {
+        return (
+            (filters.category === 'All' || product.category === filters.category) &&
+            (filters.company === 'All' || product.company === filters.company) &&
+            (filters.color === 'All' || product.color === filters.color) &&
+            (filters.search === '' || product.name.toLowerCase().includes(filters.search.toLowerCase())) &&
+            (product.price <= filters.price) &&
+            (!filters.shipping || product.shipping === filters.shipping)
+        );
+    });
+};
+
+export const { setFilter, setProducts, resetFilters } = productsFiltersSlice.actions;
 export default productsFiltersSlice.reducer;

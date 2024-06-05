@@ -7,8 +7,6 @@ import { setProducts } from '../store/productsFilters';
 
 const ProductsContainer = () => {
   const dispatch = useDispatch()
-  // const products = useSelector(state => state.filters.products)
-  // const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const getProducts = (product) => {
      dispatch(setProducts(product))

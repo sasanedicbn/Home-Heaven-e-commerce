@@ -3,12 +3,13 @@ import ProductCard from "./ProductCard";
 import ProductsHeader from "./ProductsHeader";
 
 const Products = () => {
-    const products = useSelector(state => state.filters.products)
+    const filteredProducts = useSelector(state => state.filters.filteredProducts);
+
     return (
         <div className="products">
         <ProductsHeader/>
         <div className="product-grid">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
             ))}
         </div>

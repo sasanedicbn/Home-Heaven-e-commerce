@@ -690,6 +690,7 @@ padding-bottom: 5rem;
 
 .product-grid{
   display: grid;
+  width: 950px;
   grid-template-columns: 1fr 1fr 1fr;
 }
 

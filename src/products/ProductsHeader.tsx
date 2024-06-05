@@ -1,7 +1,11 @@
+import {  useSelector } from "react-redux";
+
 const ProductsHeader = () => {
+  const products = useSelector(state => state.filters.filteredProducts.length)
+ 
     return(
         <div className="products-header">
-        <p className="number-products">22 products found</p>
+        <p className="number-products"> {products} products found</p>
         <hr className="header-line"></hr>
         <div className="sort-products">
          <label>Sort by:</label>
@@ -15,3 +19,4 @@ const ProductsHeader = () => {
     )
 }
 export default ProductsHeader;
+
