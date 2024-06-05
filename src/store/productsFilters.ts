@@ -33,9 +33,14 @@ const productsFiltersSlice = createSlice({
         resetFilters:(state) => {
             state.filters = initialFilters
             state.filteredProducts = state.products
+        },
+        sortProduct:(state,action) => {
+            state.filters.sort = action.payload
+            state.filteredProducts = sortProducts(state.filteredProducts, state.filters.sort)
         }
     },
 });
+
 
 const filterProducts = (products, filters) => {
     return products.filter(product => {
@@ -50,5 +55,5 @@ const filterProducts = (products, filters) => {
     });
 };
 
-export const { setFilter, setProducts, resetFilters } = productsFiltersSlice.actions;
+export const { setFilter, setProducts, resetFilters, sortProduct} = productsFiltersSlice.actions;
 export default productsFiltersSlice.reducer;

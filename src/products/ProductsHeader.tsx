@@ -1,6 +1,13 @@
-import {  useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
+import { sortProduct } from "../store/productsFilters";
 
 const ProductsHeader = () => {
+  const dispatch = useDispatch()
+  
+  const sortProductsHandler = (e) => {
+    dispatch(sortProduct(e.target.value))
+  }
+
   const products = useSelector(state => state.filters.filteredProducts.length)
  
     return(
@@ -9,7 +16,7 @@ const ProductsHeader = () => {
         <hr className="header-line"></hr>
         <div className="sort-products">
          <label>Sort by:</label>
-         <select name="sort" id="sort" >
+         <select name="sort" id="sort" onChange={sortProductsHandler}>
            <option value="lowest">Price (Lowest)</option>
            <option value="highest">Price (Highest)</option>
            <option value="a-z">Name (A-Z)</option>
