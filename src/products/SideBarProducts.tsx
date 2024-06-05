@@ -13,7 +13,9 @@ const SideBarProducts = () => {
     const handleInputChange = (key, value) => {
         dispatch(setFilter({ key, value }));
     };
- 
+    const handleResetFilters = () => {
+        dispatch(resetFilters())
+    }
 
     return (
         <aside className="sidebar-container">
