@@ -41,6 +41,18 @@ const productsFiltersSlice = createSlice({
     },
 });
 
+const sortProducts = (filteredProducts, sort) =>{
+    switch(sort){
+        case 'lowest':
+            return [...filteredProducts].sort((a,b) => a.price - b.price);
+        case 'highest':
+            return [...filteredProducts].sort((a,b) => b.price - a.price);
+        case 'a-z':
+            return [...filteredProducts].sort((a,b) => a.name.localeCompare(b.name));
+        case 'z-a':
+            return [...filteredProducts].sort((a,b) => b.name.localeCompare(a.name))
+    }
+}
 
 const filterProducts = (products, filters) => {
     return products.filter(product => {
