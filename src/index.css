@@ -904,3 +904,129 @@ padding-bottom: 5rem;
   }
 }
 
+/* SINGLE-PRODUCT-ITEM */
+.single-product-item{
+  background-color: rgb(231, 229, 229);
+  height: 540px;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0 auto;
+  width: 1250px;
+}
+.single-product-img{
+  width: 50%;
+}
+.single-product-description{
+  width: 50%;
+}
+.single-product-img img{
+  width: 100%;
+}
+.single-product-name{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.8rem;
+  font-weight: bold;
+}
+.single-product-price{
+  font-size: 1.2rem;
+  color:var(--color-primary);
+  margin-bottom: 1.2rem;
+  color: rgb(49, 48, 48);
+}
+.single-product-description-text{
+  margin-bottom: 1.4rem;
+  line-height: 1.3;
+}
+
+.single-product-data{
+  display: flex;
+  gap: 20px;
+ 
+}
+.single-product-brand,
+.single-product-id{
+  font-weight: bold;
+}
+.border{
+  padding-bottom: 2rem;
+ border-bottom: 1px solid var(--color-primary);
+}
+.single-product-order {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    margin-top: 20px;
+}
+
+.order-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    padding-bottom: 20px;
+}
+
+.order-button {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-button:hover {
+    background-color: #e0e0e0;
+}
+
+.number-orders {
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.cart:hover {
+    background-color: #6a60fd;
+}
+.btn-backProduct {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  margin: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-backProduct:hover {
+  color: grey;
+  transform: scale(1.05);
+}
+
+
+
+.btn-backProduct::before {
+  content: "← ";
+  margin-right: 5px;
+}

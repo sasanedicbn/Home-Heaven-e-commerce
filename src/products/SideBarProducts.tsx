@@ -13,6 +13,7 @@ const SideBarProducts = () => {
     const handleInputChange = (key, value) => {
         dispatch(setFilter({ key, value }));
     };
+    // KEY , VALUE {COMPANY: 'BOSCH'}
     const handleResetFilters = () => {
         dispatch(resetFilters())
     }
