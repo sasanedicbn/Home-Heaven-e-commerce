@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const SingleProductItem = () => {
     const { id } = useParams();
@@ -19,13 +19,17 @@ const SingleProductItem = () => {
     return (
         <div className="single-product-item">
             <div className="single-product-img">
-                <button className="btn-backProduct">Back to Products</button>
+               <Link to="/products"><button className="btn-backProduct">←  Back to Products</button></Link>
                 <img src={image} alt={name} />
             </div>
             <div className="single-product-description">
                 <p className="single-product-name">{name}</p>
                 <p className="single-product-price">${(price / 100).toFixed(2)}</p>
                 <p className="single-product-description-text">{description}</p>
+                <div className="single-product-data">
+                    <p className="single-product-id">Available:</p>
+                    <span>In stock</span>
+                </div>
                 <div className="single-product-data">
                     <p className="single-product-id">SKU:</p>
                     <span>{id}</span>
