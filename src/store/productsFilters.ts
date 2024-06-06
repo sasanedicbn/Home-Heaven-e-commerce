@@ -11,6 +11,8 @@ const initialFilters = {
 };
 
 
+
+
 const productsFiltersSlice = createSlice({
     name: 'filters',
     initialState: {
