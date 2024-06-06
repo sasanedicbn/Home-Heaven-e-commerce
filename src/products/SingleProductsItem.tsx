@@ -1,8 +1,10 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import { addItemToCart } from "../store/CartSlice";
 
 const SingleProductItem = () => {
     const { id } = useParams();
+    const dispatch = useDispatch()
     console.log('5linija', id);
     
     const product = useSelector(state => 
@@ -14,7 +16,11 @@ const SingleProductItem = () => {
         return <p>Product not found</p>;
     }
 
-    const { category, company, description, image, name, price } = product;
+    const { company, description, image, name, price } = product;
+    
+    const addItemToCartHandler = () => {
+        dispatch(addItemToCart({company, image, name,price, quantity: 1}))
+    }
 
     return (
         <div className="single-product-item">
@@ -45,7 +51,7 @@ const SingleProductItem = () => {
                         <button className="order-button">+</button>
                     </div>
                     <div>
-                        <button className="btn cart">Add to Cart</button>
+                        <button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button>
                     </div>
                 </div>
             </div>
