@@ -909,9 +909,9 @@ padding-bottom: 5rem;
   background-color: rgb(231, 229, 229);
   height: 540px;
   display: flex;
-  gap: 2.2rem;
   margin: 0 auto;
-  width: 1250px;
+
+  padding: 1rem 2rem;
 }
 .single-product-img{
   width: 50%;
@@ -920,7 +920,8 @@ padding-bottom: 5rem;
   width: 50%;
 }
 .single-product-img img{
-  width: 100%;
+  width: 540px;
+  height: 380px;
 }
 .single-product-name{
   text-transform: capitalize;
@@ -1023,8 +1024,6 @@ padding-bottom: 5rem;
   color: grey;
   transform: scale(1.05);
 }
-
-
 
 .btn-backProduct::before {
   content: "← ";
