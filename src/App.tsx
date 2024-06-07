@@ -17,7 +17,7 @@ function App() {
       children: [
         {path:'/products', element:<ProductsContainer/>},
         {path: '/', element: <Home  /> },
-        {path: '/products/:id', element: <SingleProductItem/>}
+        {path: '/products/:id', element: <SingleProductItem/>},
         {path: '/cart', element:<Cart/> }
       ]
     }

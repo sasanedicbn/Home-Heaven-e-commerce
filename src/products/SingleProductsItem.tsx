@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addItemToCart, decreaseProduct, increaseProduct } from "../store/CartSlice";
+import OrderControls from "../pages/OrderControls";
 
 const SingleProductItem = () => {
     const { id } = useParams();
-    const dispatch = useDispatch()
     const itemInCart = useSelector(state => state.cart.cart)
     console.log(itemInCart)
     
@@ -14,7 +13,6 @@ const SingleProductItem = () => {
 
     const productInCart = useSelector(state => 
         state.cart.cart.find((product) => product.id === id))
-
         console.log(productInCart)
 
     console.log(product);
@@ -25,15 +23,7 @@ const SingleProductItem = () => {
 
     const { company, description, image, name, price } = product;
     
-    const addItemToCartHandler = () => {
-        dispatch(addItemToCart({...product, quantity: 1}))
-    }
-    const increaseProductCartHandler = () => {
-        dispatch(increaseProduct(id))
-    }
-    const decreaseProductCartHandler = () => {
-        dispatch(decreaseProduct(id))
-    }
+ 
 
     return (
         <div className="single-product-item">
@@ -64,7 +54,8 @@ const SingleProductItem = () => {
                         <button className="order-button" onClick={increaseProductCartHandler}>+</button>
                     </div>
                     <div>
-                        <button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button>
+                        <OrderControls id={id}/>
+                       <Link to='/cart'><button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button></Link>
                     </div>
                 </div>
             </div>
