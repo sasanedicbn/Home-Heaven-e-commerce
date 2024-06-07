@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
     const { image, name, price, description, id } = product;
-    console.log('products iz productCard', id)
 
     return (
         <article className="product-card">

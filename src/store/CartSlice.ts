@@ -22,12 +22,12 @@ const cartSlice = createSlice({
        const currentProduct = state.cart.find((product) => product.id === productId)
        if(currentProduct){
         currentProduct.quantity += 1;
-       }
+       } 
       },
       decreaseProduct(state, action){
        const productId = action.payload;
        const currentProduct = state.cart.find((product) => product.id === productId)
-       if(currentProduct && currentProduct > 1){
+       if(currentProduct && currentProduct.quantity > 1){
         currentProduct.quantity -= 1;
        }
       }
