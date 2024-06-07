@@ -1,6 +1,7 @@
 import {  useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import OrderControls from "../pages/OrderControls";
+import { addItemToCart } from "../store/CartSlice";
 
 const SingleProductItem = () => {
     const { id } = useParams();
@@ -16,7 +17,9 @@ const SingleProductItem = () => {
         console.log(productInCart)
 
     console.log(product);
-
+    const addItemToCartHandler = () => {
+        dispatch(addItemToCart({...product, quantity: 1}))
+    }
     if (!product) {
         return <p>Product not found</p>;
     }
@@ -48,13 +51,8 @@ const SingleProductItem = () => {
                     <span>{company}</span>
                 </div>
                 <div className="single-product-order">
-                    <div className="order-controls">
-                        <button className="order-button" onClick={decreaseProductCartHandler}>-</button>
-                        <span className="number-orders">{productInCart ? productInCart.quantity : 1}</span>
-                        <button className="order-button" onClick={increaseProductCartHandler}>+</button>
-                    </div>
+                     <OrderControls id={id}/>
                     <div>
-                        <OrderControls id={id}/>
                        <Link to='/cart'><button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button></Link>
                     </div>
                 </div>
