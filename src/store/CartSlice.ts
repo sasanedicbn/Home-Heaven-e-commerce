@@ -16,9 +16,16 @@ const cartSlice = createSlice({
         } else{
           state.cart.push(newProduct)
         }
-      }
+      },
+      increaseProduct(state, action){
+       const productId = action.payload;
+       const currentProduct = state.cart.find((product) => product.id === productId)
+       if(currentProduct){
+        currentProduct.quantity += 1;
+       }
+      },
       
     },
 });
-export const { addItemToCart} = cartSlice.actions;
+export const { addItemToCart, increaseProduct} = cartSlice.actions;
 export default cartSlice.reducer;
