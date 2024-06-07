@@ -6,6 +6,7 @@ import ProductsContainer from './products/ProductsContainer';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import SingleProductItem from './products/SingleProductsItem';
+import Cart from './pages/Cart';
 
 function App() {
 
@@ -15,8 +16,9 @@ function App() {
       element: <NavBar  />,
       children: [
         {path:'/products', element:<ProductsContainer/>},
-        { path: '/', element: <Home  /> },
+        {path: '/', element: <Home  /> },
         {path: '/products/:id', element: <SingleProductItem/>}
+        {path: '/cart', element:<Cart/> }
       ]
     }
   ]);
