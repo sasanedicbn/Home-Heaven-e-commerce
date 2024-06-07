@@ -11,6 +11,12 @@ const SingleProductItem = () => {
     const product = useSelector(state => 
         state.filters.products.find(product => product.id === id)
     );
+
+    const productInCart = useSelector(state => 
+        state.cart.cart.find((product) => product.id === id))
+
+        console.log(productInCart)
+
     console.log(product);
 
     if (!product) {
@@ -54,7 +60,7 @@ const SingleProductItem = () => {
                 <div className="single-product-order">
                     <div className="order-controls">
                         <button className="order-button" onClick={decreaseProductCartHandler}>-</button>
-                        <span className="number-orders">1</span>
+                        <span className="number-orders">{productInCart ? productInCart.quantity : 1}</span>
                         <button className="order-button" onClick={increaseProductCartHandler}>+</button>
                     </div>
                     <div>
