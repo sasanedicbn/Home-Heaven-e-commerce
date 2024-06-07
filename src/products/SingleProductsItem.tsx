@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addItemToCart, increaseProduct } from "../store/CartSlice";
+import { addItemToCart, decreaseProduct, increaseProduct } from "../store/CartSlice";
 
 const SingleProductItem = () => {
     const { id } = useParams();
@@ -24,6 +24,9 @@ const SingleProductItem = () => {
     }
     const increaseProductCartHandler = () => {
         dispatch(increaseProduct(id))
+    }
+    const decreaseProductCartHandler = () => {
+        dispatch(decreaseProduct(id))
     }
 
     return (
@@ -50,7 +53,7 @@ const SingleProductItem = () => {
                 </div>
                 <div className="single-product-order">
                     <div className="order-controls">
-                        <button className="order-button">-</button>
+                        <button className="order-button" onClick={decreaseProductCartHandler}>-</button>
                         <span className="number-orders">1</span>
                         <button className="order-button" onClick={increaseProductCartHandler}>+</button>
                     </div>
