@@ -5,6 +5,8 @@ import { addItemToCart } from "../store/CartSlice";
 const SingleProductItem = () => {
     const { id } = useParams();
     const dispatch = useDispatch()
+    const itemInCart = useSelector(state => state.cart.cart)
+    console.log(itemInCart)
     console.log('5linija', id);
     
     const product = useSelector(state => 
@@ -19,7 +21,7 @@ const SingleProductItem = () => {
     const { company, description, image, name, price } = product;
     
     const addItemToCartHandler = () => {
-        dispatch(addItemToCart({company, image, name,price, quantity: 1}))
+        dispatch(addItemToCart({...product, quantity: 1}))
     }
 
     return (
