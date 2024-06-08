@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import OrderControls from "./OrderControls";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const cartItems = useSelector(state => state.cart.cart);
@@ -24,8 +25,8 @@ const Cart = () => {
                 </div>
             ))}
             <div className="cart-btns">
-                <button className="btn">Continue Shopping</button>
-                <button className="btn">Clear Shopping Cart</button>
+               <Link to='/products'><button className="btn continue-shopping">Continue Shopping</button></Link>
+                <button className="btn clear-shopping">Clear Shopping Cart</button>
             </div>
         </div>
     );

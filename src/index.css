@@ -1066,3 +1066,20 @@ padding-bottom: 5rem;
 .cart-titles p:nth-child(3){
   margin-right: 14px;
 }
+.continue-shopping{
+  background-color: var(--color-primary);
+  color:#fff;
+  transition: all 1s ease;
+}
+.continue-shopping:hover{
+  background-color: rgb(31, 31, 175);
+}
+.clear-shopping{
+  background-color: rgb(235, 57, 57);
+  color:#fff;
+  transition: all 1s ease;
+
+}
+.clear-shopping:hover{
+  background-color: rgb(209, 7, 7);
+}
