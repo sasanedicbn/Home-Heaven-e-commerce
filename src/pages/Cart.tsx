@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import OrderControls from "./OrderControls";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
-import { removeItemFromCart } from "../store/CartSlice";
+import { clearShoppingCart, removeItemFromCart } from "../store/CartSlice";
 
 const Cart = () => {
     const dispatch = useDispatch()
@@ -10,6 +10,9 @@ const Cart = () => {
     console.log(cartItems)
     const deteleProductfromCart = (id) => {
         dispatch(removeItemFromCart(id))
+    }
+    const deleteAllProductfromCart = () => {
+        dispatch(clearShoppingCart())
     }
     if(cartItems === 0){
         <p>Your cart is empy.</p>
@@ -37,7 +40,7 @@ const Cart = () => {
             )))}
             <div className="cart-btns">
                <Link to='/products'><button className="btn continue-shopping">Continue Shopping</button></Link>
-                <button className="btn clear-shopping">Clear Shopping Cart</button>
+                <button className="btn clear-shopping" onClick={() => deleteAllProductfromCart()}>Clear Shopping Cart</button>
             </div>
         </div>
     );
