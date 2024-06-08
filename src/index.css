@@ -1021,9 +1021,8 @@ padding-bottom: 5rem;
 .cart-container{
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
   padding: 2rem 5rem;
-  height: 553px;
+  height: 853px;
 }
 .cart-titles{
   color: black;
@@ -1104,7 +1103,7 @@ padding-bottom: 5rem;
   margin: 0 auto;
   border: 1px solid rgb(119, 119, 119);
   width: 400px;
-  height: 550px;
+  height: 165px;
   padding: 24px 24px;
 }
 .cart-total-subtotal{
