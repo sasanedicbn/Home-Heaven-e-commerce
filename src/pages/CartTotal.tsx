@@ -1,17 +1,29 @@
+import { useSelector } from "react-redux";
+
 const CartTotal = () => {
+    const products = useSelector(state => state.cart.cart)
+
+    const subTotal = products.reduce((total, product) => {
+        return total + (product.price * product.quantity)
+    }, 0)
+    
+    const shippingFee = 800; 
+    const orderTotal = subTotal + shippingFee
+
+    console.log('carttotalKOMPONENT',subTotal)
     return(
         <div className="cart-total">
             <div>
               <p className="cart-total-subtotal">SubTotal: </p>
-              <span>$120.00</span>
+              <span>${(subTotal/100).toFixed(2)}</span>
             </div>
             <div>
               <p className="cart-total-fee">Shipping fee: </p>
-              <span>$5.15</span>
+              <span>${(shippingFee /100).toFixed(2)}</span>
             </div>
             <div>
               <p className="orderTotal">OrderTotal: </p>
-              <span>$400,00</span>
+              <span>${(orderTotal / 100).toFixed(2)}</span>
             </div>  
         </div>
     )
