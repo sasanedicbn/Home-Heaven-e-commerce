@@ -1091,7 +1091,7 @@ padding-bottom: 5rem;
 .cart-details p span svg{
   width: 28px;
   height: 28px;
-  color: red;
+  color: rgb(235, 57, 57);
   margin-left: 1rem;
 
   cursor: pointer;

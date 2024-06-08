@@ -30,9 +30,14 @@ const cartSlice = createSlice({
        if(currentProduct && currentProduct.quantity > 1){
         currentProduct.quantity -= 1;
        }
+      },
+      removeItemFromCart(state, action) {
+        const productId = action.payload;
+        console.log('ss',productId)
+        state.cart = state.cart.filter(product => product.id !== productId)
       }
       
     },
 });
-export const { addItemToCart, increaseProduct, decreaseProduct} = cartSlice.actions;
+export const { addItemToCart, increaseProduct, decreaseProduct, removeItemFromCart} = cartSlice.actions;
 export default cartSlice.reducer;
