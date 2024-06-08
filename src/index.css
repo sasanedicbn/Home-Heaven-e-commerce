@@ -1093,6 +1093,9 @@ padding-bottom: 5rem;
   height: 28px;
   color: rgb(235, 57, 57);
   margin-left: 1rem;
-
   cursor: pointer;
+}
+.empty-cart-message{
+  font-weight: bold;
+  text-align: center;
 }

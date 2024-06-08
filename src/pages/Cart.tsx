@@ -22,7 +22,9 @@ const Cart = () => {
                 <p>Quantity</p>
                 <p>Subtotal</p>
             </div>
-            {cartItems.map(item => (
+            {cartItems.length === 0 ?(
+                 <p className="empty-cart-message">Your cart is empty.</p>
+            ):(cartItems.map(item => (
                 <div className="cart-details" key={item.id}>
                     <div className="cart-details-img">
                         <img src={item.image} alt={item.name} />
@@ -32,7 +34,7 @@ const Cart = () => {
                     <OrderControls id={item.id} />
                     <p>${((item.price * item.quantity) / 100).toFixed(2)} <span onClick={() => deteleProductfromCart(item.id)}> <MdDelete /></span></p>
                 </div>
-            ))}
+            )))}
             <div className="cart-btns">
                <Link to='/products'><button className="btn continue-shopping">Continue Shopping</button></Link>
                 <button className="btn clear-shopping">Clear Shopping Cart</button>
