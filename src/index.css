@@ -1100,3 +1100,36 @@ padding-bottom: 5rem;
   text-align: center;
   font-size: 20px;
 }
+.cart-total{
+  margin: 0 auto;
+  border: 1px solid rgb(119, 119, 119);
+  width: 400px;
+  height: 550px;
+  padding: 24px 24px;
+}
+.cart-total-subtotal{
+ color: rgb(29, 29, 29);
+ font-size: 20px;
+ font-weight: bold;
+}
+.cart-total-fee{
+  color: rgb(48, 48, 48);
+  margin: 12px 0;
+  padding-bottom: 12px;
+}
+.cart-total div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-total div:nth-child(2){
+  border-bottom: 1px solid rgb(8, 8, 8);
+}
+.cart-total div:nth-child(3){
+   margin-top: 20px; 
+}
+.cart-total div:nth-child(1), 
+.cart-total div:nth-child(3){
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,9 +1,18 @@
 const CartTotal = () => {
     return(
         <div className="cart-total">
-            <p>SubTotal</p>
-            <p>Shipping fee</p>
-            <p className="orderTotal">OrderTotal: </p>
+            <div>
+              <p className="cart-total-subtotal">SubTotal: </p>
+              <span>$120.00</span>
+            </div>
+            <div>
+              <p className="cart-total-fee">Shipping fee: </p>
+              <span>$5.15</span>
+            </div>
+            <div>
+              <p className="orderTotal">OrderTotal: </p>
+              <span>$400,00</span>
+            </div>  
         </div>
     )
 }
