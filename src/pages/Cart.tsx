@@ -3,14 +3,17 @@ import OrderControls from "./OrderControls";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { clearShoppingCart, removeItemFromCart } from "../store/CartSlice";
+import CartTotal from "./CartTotal";
 
 const Cart = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.cart);
     console.log(cartItems)
+
     const deteleProductfromCart = (id) => {
         dispatch(removeItemFromCart(id))
     }
+
     const deleteAllProductfromCart = () => {
         dispatch(clearShoppingCart())
     }
@@ -42,6 +45,7 @@ const Cart = () => {
                <Link to='/products'><button className="btn continue-shopping">Continue Shopping</button></Link>
                 <button className="btn clear-shopping" onClick={() => deleteAllProductfromCart()}>Clear Shopping Cart</button>
             </div>
+            <CartTotal/>
         </div>
     );
 };
