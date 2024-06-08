@@ -1083,3 +1083,16 @@ padding-bottom: 5rem;
 .clear-shopping:hover{
   background-color: rgb(209, 7, 7);
 }
+.cart-details p:last-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cart-details p span svg{
+  width: 28px;
+  height: 28px;
+  color: red;
+  margin-left: 1rem;
+
+  cursor: pointer;
+}
