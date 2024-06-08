@@ -1,24 +1,23 @@
-import {  useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import OrderControls from "../pages/OrderControls";
 import { addItemToCart } from "../store/CartSlice";
 
 const SingleProductItem = () => {
     const { id } = useParams();
-    const itemInCart = useSelector(state => state.cart.cart)
-    console.log(itemInCart)
+    const dispatch = useDispatch()
     
     const product = useSelector(state => 
         state.filters.products.find(product => product.id === id)
     );
-
     const productInCart = useSelector(state => 
-        state.cart.cart.find((product) => product.id === id))
-        console.log(productInCart)
+        state.cart.cart.find(product => product.id === id)
+    );
 
-    console.log(product);
     const addItemToCartHandler = () => {
-        dispatch(addItemToCart({...product, quantity: 1}))
+        if (!productInCart) {
+            dispatch(addItemToCart({ ...product, quantity: 1 }));
+        }
     }
     if (!product) {
         return <p>Product not found</p>;

@@ -3,9 +3,9 @@ import {  decreaseProduct, increaseProduct } from "../store/CartSlice"
 
 const OrderControls = ({id}) => {
     const dispatch = useDispatch()
-    const product = useSelector(state => 
-        state.filters.products.find(product => product.id === id)
-    );
+  
+    const productInCart = useSelector(state => 
+        state.cart.cart.find((product) => product.id === id))
    
     const increaseProductCartHandler = () => {
         dispatch(increaseProduct(id))

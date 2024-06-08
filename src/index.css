@@ -1039,7 +1039,30 @@ padding-bottom: 5rem;
 }
 .cart-details-img{
   display: flex;
+  flex-direction: column-reverse;
+  text-transform: capitalize;
+
 }
+.cart-details-img img{
+  width: 150px;
+  height: 100px;
+}
+
 .cart-titles, .cart-details{
   border-bottom: 1px solid black;
+}
+.cart-details{
+  display: flex;
+  align-items: center;
+}
+.cart-details div, .cart-details p{
+  width: 160px;
+  text-align: center;
+}
+.cart-titles p{
+  width: 160px;
+  text-align: center;
+}
+.cart-titles p:nth-child(3){
+  margin-right: 14px;
 }
