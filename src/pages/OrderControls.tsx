@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux"
 import {  decreaseProduct, increaseProduct } from "../store/CartSlice"
 
-const OrderControls = ({id}) => {
+const OrderControls = ({id,product}) => {
     const dispatch = useDispatch()
   
     const productInCart = useSelector(state => 
         state.cart.cart.find((product) => product.id === id))
    
     const increaseProductCartHandler = () => {
-        dispatch(increaseProduct(id))
+        dispatch(increaseProduct({id,product}))
     }
     const decreaseProductCartHandler = () => {
         dispatch(decreaseProduct(id))

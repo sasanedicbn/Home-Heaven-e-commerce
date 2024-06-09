@@ -18,11 +18,14 @@ const cartSlice = createSlice({
         }
       },
       increaseProduct(state, action){
-       const productId = action.payload;
-       const currentProduct = state.cart.find((product) => product.id === productId)
+        console.log(action.payload)
+       const {id, product} = action.payload;
+       const currentProduct = state.cart.find((product) => product.id === id)
        if(currentProduct){
         currentProduct.quantity += 1;
-       } 
+       }else{
+        state.cart.push({...product, quantity:1})
+       }
       },
       decreaseProduct(state, action){
        const productId = action.payload;

@@ -50,7 +50,7 @@ const SingleProductItem = () => {
                     <span>{company}</span>
                 </div>
                 <div className="single-product-order">
-                     <OrderControls id={id}/>
+                     <OrderControls id={id} product={product}/>
                     <div>
                        <Link to='/cart'><button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button></Link>
                     </div>
