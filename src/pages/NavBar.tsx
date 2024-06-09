@@ -3,10 +3,16 @@ import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Outlet } from 'react-router-dom';
 import { NavBarProps } from '../types/types';
+import { useSelector } from 'react-redux';
 
 const NavBar: React.FC<NavBarProps> = () => {
   const navRef = useRef();
   const [isOpenMenu, setOpenMenu] = useState(false);
+  const cartItems = useSelector(state => state.cart.cart)
+  const cartItemsinCart = cartItems.reduce((total, products) => {
+    return total + products.quantity
+  }, 0)
+  console.log('iz nava',cartItemsinCart)
 
   const toggleMenu = () => {
     setOpenMenu((state) => !state);
@@ -53,7 +59,7 @@ const NavBar: React.FC<NavBarProps> = () => {
                   <BsBag />
                 </a>
               </div>
-              <span className="badge">0</span>
+              <span className="badge">{cartItemsinCart}</span>
             </div>
           </ul>
           <button className="hamburger" onClick={toggleMenu}>
