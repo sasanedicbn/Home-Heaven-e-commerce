@@ -1,6 +1,6 @@
 import '../index.css';
 
-const HomeSectionWrapper = ({ children, title, subTitle, className}:{children:any, title:string, subTitle:string}) => {
+const HomeSectionWrapper = ({ children, title, subTitle, }:{children:any, title:string, subTitle:string}) => {
   return (
     <div className="wrapper">
       <div className='container-creeds'>

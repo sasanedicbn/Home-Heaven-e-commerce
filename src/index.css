@@ -40,6 +40,12 @@ nav{
   gap: 0.4rem;
   color: var(--color-paragraph-primary)
 }
+.icon-text a{
+  text-decoration: none;
+}
+.icon-text a span{
+  margin-right: .3rem;
+}
 .nav-list{
   display: flex;
   align-items: center;

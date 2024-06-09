@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import { NavBarProps } from '../types/types';
 import { useSelector } from 'react-redux';
+import { RootState } from '../store/store';
 
 const NavBar: React.FC<NavBarProps> = () => {
-  const navRef = useRef();
+  const navRef = useRef<HTMLElement>(null);
   const [isOpenMenu, setOpenMenu] = useState(false);
-  const cartItems = useSelector(state => state.cart.cart)
+  const cartItems = useSelector((state:RootState) => state.cart.cart)
   const cartItemsinCart = cartItems.reduce((total, products) => {
-    return total + products.quantity
+    return total + products.quantity;
   }, 0)
   console.log('iz nava',cartItemsinCart)
 
@@ -46,18 +47,18 @@ const NavBar: React.FC<NavBarProps> = () => {
             </div>
           </a>
           <ul className={`nav-list ${isOpenMenu ? 'isOpen' : ''}`}>
-            <a className="nav-list-item-link active-link" href="/">
+            <Link className="nav-list-item-link active-link" to="/">
               <li className="nav-list-item">Home</li>
-            </a>
+            </Link>
             <a className="nav-list-item-link" href="/products">
               <li className="nav-list-item">Products</li>
             </a>
             <div className="shopping-card">
               <div className="icon-text">
+              <Link to="/cart" className="cart-icon">
                 <span>Cart</span>
-                <a href="/" className="cart-icon">
                   <BsBag />
-                </a>
+                </Link>
               </div>
               <span className="badge">{cartItemsinCart}</span>
             </div>
