@@ -38,12 +38,17 @@ const ProductsContainer = () => {
     setShowFilter(!showFilter);
   };
 
+  const closeFilterSidebar = () => {
+    setShowFilter(false);
+  };
+
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
         <div className="products-container">
+         { showFilter && <div className='overlay' onClick={closeFilterSidebar}></div>}
           <SideBarProducts showFilter={showFilter} />
           <Products toggleFilterSidebar={toggleFilterSidebar} />
         </div>
