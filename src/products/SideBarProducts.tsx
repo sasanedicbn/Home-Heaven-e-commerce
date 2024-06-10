@@ -5,7 +5,6 @@ const SideBarProducts = ({ showFilter }) => {
   const dispatch = useDispatch();
   const filters = useSelector(state => state.filters.filters);
   const products = useSelector(state => state.filters.products);
-  const initialFilters = useSelector(state => state.filters.products);
 
   const uniqueCategories = [...new Set(products.map(product => product.category))];
   const uniqueCompanies = [...new Set(products.map(product => product.company))];
