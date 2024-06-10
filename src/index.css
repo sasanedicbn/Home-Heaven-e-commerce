@@ -260,7 +260,10 @@ color: var(--color-paragraph-primary);
 
 /* TABLETS */
 @media (max-width: 1220px){
- 
+  .single-product-item{
+    flex-direction: column;
+    
+  }
   .section-header{
     padding: 0 2.2rem;
   }
@@ -315,6 +318,12 @@ color: var(--color-paragraph-primary);
    .products-header .header-line{
     width:250px ;
    }
+   .single-product-item .single-product-img img{
+    width: 800px;
+   }
+   .single-product-item .single-product-description{
+    width: 75%;
+   }
 }
 .filter-icon{
   display: none;
@@ -348,6 +357,12 @@ color: var(--color-paragraph-primary);
     height: 100%;
     z-index: 1000;
   }
+  .single-product-item .single-product-img img{
+    width: 600px;
+   }
+   .single-product-item .single-product-description{
+    width: 75%;
+   }
    #root .products-container{
     padding: 0 1.8rem;
    }
@@ -366,8 +381,9 @@ color: var(--color-paragraph-primary);
 
   }
   .slider .slider-wrapper{
-    width: 600px;
+    width: 700px;
   }
+  
   .header-description{
     width: 57.5%;
   }
@@ -437,6 +453,7 @@ color: var(--color-paragraph-primary);
      transition: all 0.8s ease-in-out;
  }
  
+ 
   .nav-list .icon-text span, .cart-icon, .nav-list.isOpen a li{
     margin-top: 2rem;
   }
@@ -456,6 +473,9 @@ color: var(--color-paragraph-primary);
 
 
 @media (max-width: 774px){
+  .products .product-grid{
+    grid-template-columns: 1fr 1fr;
+   }
   .header-title h1{
    font-size: 1.5rem;
  }
@@ -501,8 +521,33 @@ color: var(--color-paragraph-primary);
 .section-testimonials .slider{
   width: 83.5%;
 }
+.products-header .header-line{
+  width: 170px;
+}
+.single-product-item .single-product-img img{
+  width: 600px;
+ }
+ .single-product-item .single-product-description{
+  width: 80%;
+ }
 }
 @media (max-width: 665px){
+  .products-header .header-line{
+    display: none;
+  }
+  .single-product-item .single-product-img img{
+    width: 100%;
+   }
+ 
+  .single-product-item .single-product-img {
+    width: 100%;
+   }
+   .single-product-item .single-product-description{
+    width: 97.5%;
+   }
+  .products .product-grid{
+    grid-template-columns: 1fr;
+   }
   .testimonial-card .testimonial-title{
     font-size: 20px;
   }
@@ -1023,7 +1068,6 @@ padding-bottom: 5rem;
 /* SINGLE-PRODUCT-ITEM */
 .single-product-item{
   background-color: rgb(231, 229, 229);
-  height: 553px;
   display: flex;
   margin: 0 auto;
 
