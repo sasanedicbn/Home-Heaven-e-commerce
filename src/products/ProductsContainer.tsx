@@ -2,15 +2,18 @@ import { useState, useEffect } from 'react';
 import Products from './Products';
 import SideBarProducts from './SideBarProducts';
 import Spinner from '../components/Spinner';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setProducts } from '../store/productsFilters';
 
 const ProductsContainer = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
+
   const getProducts = (product) => {
-     dispatch(setProducts(product))
-  }
+    dispatch(setProducts(product));
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,7 +23,7 @@ const ProductsContainer = () => {
           throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        getProducts(data)
+        getProducts(data);
       } catch (error) {
         console.log('error');
       } finally {
@@ -31,14 +34,18 @@ const ProductsContainer = () => {
     fetchData();
   }, []);
 
+  const toggleFilterSidebar = () => {
+    setShowFilter(!showFilter);
+  };
+
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
         <div className="products-container">
-          <SideBarProducts />
-          <Products />
+          <SideBarProducts showFilter={showFilter} />
+          <Products toggleFilterSidebar={toggleFilterSidebar} />
         </div>
       )}
     </>
@@ -46,4 +53,3 @@ const ProductsContainer = () => {
 };
 
 export default ProductsContainer;
-
