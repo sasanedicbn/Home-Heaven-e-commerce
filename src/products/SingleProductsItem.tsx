@@ -1,36 +1,38 @@
-import {  useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import OrderControls from "../pages/OrderControls";
 import { addItemToCart } from "../store/CartSlice";
+import { RootState } from "../store/store";
+import { Product } from "../types/types";
 
 const SingleProductItem = () => {
-    const { id } = useParams();
-    const dispatch = useDispatch()
-    
-    const product = useSelector(state => 
-        state.filters.products.find(product => product.id === id)
-    );
-    const productInCart = useSelector(state => 
-        state.cart.cart.find(product => product.id === id)
-    );
+    const { id } = useParams<{ id: string }>();
+    const dispatch = useDispatch();
+
+    const product = useSelector((state: RootState) =>
+        state.filters.products.find((product) => product.id === id)
+    ) as Product | undefined;
+
+    const productInCart = useSelector((state: RootState) =>
+        state.cart.cart.find((product) => product.id === id)
+    ) as Product | undefined;
 
     const addItemToCartHandler = () => {
-        if (!productInCart) {
+        if (!productInCart && product) {
             dispatch(addItemToCart({ ...product, quantity: 1 }));
         }
-    }
+    };
+
     if (!product) {
         return <p>Product not found</p>;
     }
 
     const { company, description, image, name, price } = product;
-    
- 
 
     return (
         <div className="single-product-item">
             <div className="single-product-img">
-               <Link to="/products"><button className="btn-backProduct">←  Back to Products</button></Link>
+                <Link to="/products"><button className="btn-backProduct">←  Back to Products</button></Link>
                 <img src={image} alt={name} />
             </div>
             <div className="single-product-description">
@@ -50,9 +52,9 @@ const SingleProductItem = () => {
                     <span>{company}</span>
                 </div>
                 <div className="single-product-order">
-                     <OrderControls id={id} product={product}/>
+                {id && <OrderControls id={id} product={product} />}
                     <div>
-                       <Link to='/cart'><button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button></Link>
+                        <Link to='/cart'><button className="btn cart" onClick={addItemToCartHandler}>Add to Cart</button></Link>
                     </div>
                 </div>
             </div>
@@ -61,4 +63,3 @@ const SingleProductItem = () => {
 }
 
 export default SingleProductItem;
-
