@@ -1,9 +1,14 @@
 import { useSelector } from "react-redux";
 import ProductCard from "./ProductCard";
 import ProductsHeader from "./ProductsHeader";
+import { RootState } from "../store/store";
+import { Product } from "../types/types";
 
-const Products = ({toggleFilterSidebar}) => {
-    const filteredProducts = useSelector(state => state.filters.filteredProducts);
+type Productsprops = {
+    toggleFilterSidebar: () => void; 
+  }
+const Products = ({toggleFilterSidebar}:Productsprops) => {
+    const filteredProducts = useSelector((state:RootState) => state.filters.filteredProducts) as Product[];
 
     return (
         <div className="products">
