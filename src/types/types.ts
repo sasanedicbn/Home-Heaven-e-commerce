@@ -7,5 +7,6 @@ export type  Product = {
   name: string;
   price: number;
   quantity: number;
+  shipping: boolean,
   [key: string]: any; 
 }
