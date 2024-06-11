@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "../types/types";
 
-
-
 type  Filters = {
     category: string;
     company: string;
@@ -12,9 +10,7 @@ type  Filters = {
     shipping: boolean;
     sort: string;
     [key: string]: string | number | boolean;
-
 }
-
 
 interface FiltersState {
     products: Product[];
