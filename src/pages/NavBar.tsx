@@ -2,14 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BsBag } from 'react-icons/bs';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link, Outlet } from 'react-router-dom';
-import { NavBarProps } from '../types/types';
+import { NavBarProps, Product } from '../types/types';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 
 const NavBar: React.FC<NavBarProps> = () => {
   const navRef = useRef<HTMLElement>(null);
   const [isOpenMenu, setOpenMenu] = useState(false);
-  const cartItems = useSelector((state:RootState) => state.cart.cart)
+  const cartItems = useSelector((state:RootState) => state.cart.cart as Product[])
   const cartItemsinCart = cartItems.reduce((total, products) => {
     return total + products.quantity;
   }, 0)
