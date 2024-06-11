@@ -8,5 +8,7 @@ export type  Product = {
   price: number;
   quantity: number;
   shipping: boolean,
+  category: string; 
+  company: string; 
   [key: string]: any; 
 }

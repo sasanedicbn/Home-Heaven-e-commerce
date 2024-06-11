@@ -1,15 +1,21 @@
 import { useDispatch, useSelector } from "react-redux";
 import { resetFilters, setFilter } from "../store/productsFilters";
+import { RootState } from "../store/store";
+import { Product } from "../types/types";
 
-const SideBarProducts = ({ showFilter }) => {
+type SideBarProductsProps = { 
+    showFilter: boolean;
+  }
+
+const SideBarProducts = ({ showFilter }:SideBarProductsProps) => {
   const dispatch = useDispatch();
-  const filters = useSelector(state => state.filters.filters);
-  const products = useSelector(state => state.filters.products);
+  const filters = useSelector((state:RootState) => state.filters.filters);
+  const products = useSelector((state:RootState) => state.filters.products) as Product[]
 
-  const uniqueCategories = [...new Set(products.map(product => product.category))];
+  const uniqueCategories = [...new Set(products.map(product => product.category))] ;
   const uniqueCompanies = [...new Set(products.map(product => product.company))];
 
-  const handleInputChange = (key, value) => {
+  const handleInputChange = (key:string, value:any) => {
     dispatch(setFilter({ key, value }));
   };
 
