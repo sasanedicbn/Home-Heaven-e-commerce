@@ -12,7 +12,7 @@ const Operations = () => {
         setOperationData(operationsData);
     }, []);
 
-    function showTabContent(id) {
+    function showTabContent(id:number) {
         setActiveTab(id);
     }
 
