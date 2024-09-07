@@ -4,22 +4,21 @@ import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { clearShoppingCart, removeItemFromCart } from "../store/CartSlice";
 import CartTotal from "./CartTotal";
+import { RootState } from "../store/store";
 
 const Cart = () => {
     const dispatch = useDispatch()
-    const cartItems = useSelector(state => state.cart.cart);
+    const cartItems = useSelector((state:RootState) => state.cart.cart);
     console.log(cartItems)
 
-    const deteleProductfromCart = (id) => {
+    const deteleProductfromCart = (id:string) => {
         dispatch(removeItemFromCart(id))
     }
 
     const deleteAllProductfromCart = () => {
         dispatch(clearShoppingCart())
     }
-    if(cartItems === 0){
-        <p>Your cart is empy.</p>
-    }
+   
     return (
         <div className="cart-container">
             <div className="cart-titles">

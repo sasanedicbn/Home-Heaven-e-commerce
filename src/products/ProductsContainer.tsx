@@ -10,7 +10,7 @@ const ProductsContainer = () => {
   const [loading, setLoading] = useState(true);
   const [showFilter, setShowFilter] = useState(false);
 
-  const getProducts = (product) => {
+  const getProducts = (product:any) => {
     dispatch(setProducts(product));
   };
 
