@@ -6,7 +6,7 @@ const FeaturedItem = ({name, price, img}: {name: string, price: string, img: str
             <article className="featured-product-card">
                 <div className="featured-product-image">
                     <a href='/'>
-                        <img src={`/${img}`} alt="featured-product" />
+                        <img src={`${img}`} alt="featured-product" />
                     </a>
                 </div>
                 <div className="featured-product-description">
