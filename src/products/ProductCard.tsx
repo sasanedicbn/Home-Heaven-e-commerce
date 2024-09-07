@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { Product } from "../types/types";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product }:Product) => {
     const { image, name, price, description, id } = product;
 
     return (
