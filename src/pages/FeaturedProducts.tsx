@@ -11,9 +11,9 @@ const FeaturedProducts = React.forwardRef<HTMLDivElement>(() => {
       <section className="section-featured-products" ref={featuredRef} >
         <div className="container-featured-products">
           <div className="feturedItem">
-            <FeaturedItem name="Sofa Set" price="$1,299.99" img="public/FeturedProducts/product-1.jpeg" />
-            <FeaturedItem name="Utopia Sofa" price="$799.99" img="public/FeturedProducts/product-16.jpeg" />
-            <FeaturedItem name="Suede Armchair" price="$159.99" img="public/FeturedProducts/product-17.jpeg" />
+            <FeaturedItem name="Sofa Set" price="$1,299.99" img="/FeturedProducts/product-1.jpeg" />
+            <FeaturedItem name="Utopia Sofa" price="$799.99" img="/FeturedProducts/product-16.jpeg" />
+            <FeaturedItem name="Suede Armchair" price="$159.99" img="/FeturedProducts/product-17.jpeg" />
           </div>
           <div className="featured-btn-container">
             <a href="/">

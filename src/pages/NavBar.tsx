@@ -50,9 +50,9 @@ const NavBar: React.FC<NavBarProps> = () => {
             <Link className="nav-list-item-link active-link" to="/">
               <li className="nav-list-item">Home</li>
             </Link>
-            <a className="nav-list-item-link" href="/products">
+            <Link className="nav-list-item-link" to="/products">
               <li className="nav-list-item">Products</li>
-            </a>
+            </Link>
             <div className="shopping-card">
               <div className="icon-text">
               <Link to="/cart" className="cart-icon">
