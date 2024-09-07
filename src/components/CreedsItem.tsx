@@ -1,6 +1,7 @@
+import { IconType } from "react-icons";
 
 
-const CreedsItem = ({ icon: Icon, title, description }:{icon: string, title:string, description: string}) => {
+const CreedsItem = ({ icon: Icon, title, description }:{icon: IconType, title:string, description: string}) => {
     return(
         <div className="creeds-cards">
             <article className="creed-article">

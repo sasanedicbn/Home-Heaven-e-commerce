@@ -36,7 +36,7 @@ const Cart = () => {
                         <p>{item.name}</p>
                     </div>
                     <p>${(item.price / 100).toFixed(2)}</p>
-                    <OrderControls id={item.id} />
+                    <OrderControls id={item.id}  product={item}/>
                     <p>${((item.price * item.quantity) / 100).toFixed(2)} <span onClick={() => deteleProductfromCart(item.id)}> <MdDelete /></span></p>
                 </div>
             )))}
