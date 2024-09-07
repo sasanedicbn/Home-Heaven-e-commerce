@@ -6,7 +6,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const Testimonials = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [underlineWidth, setUnderlineWidth] = useState(0);
-    const underlineRef = useRef();
+    const underlineRef = useRef<any>();
 
     const nextSlide = useCallback(() => {
         setActiveIndex(prev => (prev === testimonialData.length - 1 ? 0 : prev + 1));
