@@ -2,7 +2,7 @@ import { IconType } from 'react-icons';
 import { FaWind, FaHeadset, FaLightbulb, FaUndo,  } from 'react-icons/fa';
 
 
-type Operation = {
+export type Operation = {
   id: number;
   button: string;
   icon: IconType; 

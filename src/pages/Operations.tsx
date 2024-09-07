@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import HomeSectionWrapper from "./HomeSectionWrapper";
-import {operationsData} from "./constants/constants";
+import {Operation, operationsData} from "./constants/constants";
 import { useRefs } from "./Refs/RefsProvider";
 
 const Operations = () => {
-    const [operationData, setOperationData] = useState([]);
+    const [operationData, setOperationData] = useState<Operation[]>([]);
     const [activeTab, setActiveTab] = useState(1);
     const {operationsRef} = useRefs()
 
